@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: Solana.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
@@ -18,7 +18,19 @@ class Transfer extends $pb.GeneratedMessage {
   ;
 
   Transfer._() : super();
-  factory Transfer() => create();
+  factory Transfer({
+    $core.String? recipient,
+    $fixnum.Int64? value,
+  }) {
+    final _result = create();
+    if (recipient != null) {
+      _result.recipient = recipient;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
   factory Transfer.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Transfer.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -30,7 +42,7 @@ class Transfer extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Transfer copyWith(void Function(Transfer) updates) => super.copyWith((message) => updates(message as Transfer)); // ignore: deprecated_member_use
+  Transfer copyWith(void Function(Transfer) updates) => super.copyWith((message) => updates(message as Transfer)) as Transfer; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Transfer create() => Transfer._();
@@ -38,7 +50,7 @@ class Transfer extends $pb.GeneratedMessage {
   static $pb.PbList<Transfer> createRepeated() => $pb.PbList<Transfer>();
   @$core.pragma('dart2js:noInline')
   static Transfer getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Transfer>(create);
-  static Transfer _defaultInstance;
+  static Transfer? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get recipient => $_getSZ(0);
@@ -59,35 +71,52 @@ class Transfer extends $pb.GeneratedMessage {
   void clearValue() => clearField(2);
 }
 
-class Stake extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Stake', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
+class DelegateStake extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DelegateStake', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'validatorPubkey')
     ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stakeAccount')
     ..hasRequiredFields = false
   ;
 
-  Stake._() : super();
-  factory Stake() => create();
-  factory Stake.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Stake.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  DelegateStake._() : super();
+  factory DelegateStake({
+    $core.String? validatorPubkey,
+    $fixnum.Int64? value,
+    $core.String? stakeAccount,
+  }) {
+    final _result = create();
+    if (validatorPubkey != null) {
+      _result.validatorPubkey = validatorPubkey;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    if (stakeAccount != null) {
+      _result.stakeAccount = stakeAccount;
+    }
+    return _result;
+  }
+  factory DelegateStake.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DelegateStake.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Stake clone() => Stake()..mergeFromMessage(this);
+  DelegateStake clone() => DelegateStake()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Stake copyWith(void Function(Stake) updates) => super.copyWith((message) => updates(message as Stake)); // ignore: deprecated_member_use
+  DelegateStake copyWith(void Function(DelegateStake) updates) => super.copyWith((message) => updates(message as DelegateStake)) as DelegateStake; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Stake create() => Stake._();
-  Stake createEmptyInstance() => create();
-  static $pb.PbList<Stake> createRepeated() => $pb.PbList<Stake>();
+  static DelegateStake create() => DelegateStake._();
+  DelegateStake createEmptyInstance() => create();
+  static $pb.PbList<DelegateStake> createRepeated() => $pb.PbList<DelegateStake>();
   @$core.pragma('dart2js:noInline')
-  static Stake getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Stake>(create);
-  static Stake _defaultInstance;
+  static DelegateStake getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DelegateStake>(create);
+  static DelegateStake? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get validatorPubkey => $_getSZ(0);
@@ -106,16 +135,33 @@ class Stake extends $pb.GeneratedMessage {
   $core.bool hasValue() => $_has(1);
   @$pb.TagNumber(2)
   void clearValue() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get stakeAccount => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set stakeAccount($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasStakeAccount() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearStakeAccount() => clearField(3);
 }
 
 class DeactivateStake extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DeactivateStake', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'validatorPubkey')
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stakeAccount')
     ..hasRequiredFields = false
   ;
 
   DeactivateStake._() : super();
-  factory DeactivateStake() => create();
+  factory DeactivateStake({
+    $core.String? stakeAccount,
+  }) {
+    final _result = create();
+    if (stakeAccount != null) {
+      _result.stakeAccount = stakeAccount;
+    }
+    return _result;
+  }
   factory DeactivateStake.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DeactivateStake.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -127,7 +173,7 @@ class DeactivateStake extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DeactivateStake copyWith(void Function(DeactivateStake) updates) => super.copyWith((message) => updates(message as DeactivateStake)); // ignore: deprecated_member_use
+  DeactivateStake copyWith(void Function(DeactivateStake) updates) => super.copyWith((message) => updates(message as DeactivateStake)) as DeactivateStake; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static DeactivateStake create() => DeactivateStake._();
@@ -135,27 +181,80 @@ class DeactivateStake extends $pb.GeneratedMessage {
   static $pb.PbList<DeactivateStake> createRepeated() => $pb.PbList<DeactivateStake>();
   @$core.pragma('dart2js:noInline')
   static DeactivateStake getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeactivateStake>(create);
-  static DeactivateStake _defaultInstance;
+  static DeactivateStake? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get validatorPubkey => $_getSZ(0);
+  $core.String get stakeAccount => $_getSZ(0);
   @$pb.TagNumber(1)
-  set validatorPubkey($core.String v) { $_setString(0, v); }
+  set stakeAccount($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasValidatorPubkey() => $_has(0);
+  $core.bool hasStakeAccount() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValidatorPubkey() => clearField(1);
+  void clearStakeAccount() => clearField(1);
+}
+
+class DeactivateAllStake extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DeactivateAllStake', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
+    ..pPS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stakeAccounts')
+    ..hasRequiredFields = false
+  ;
+
+  DeactivateAllStake._() : super();
+  factory DeactivateAllStake({
+    $core.Iterable<$core.String>? stakeAccounts,
+  }) {
+    final _result = create();
+    if (stakeAccounts != null) {
+      _result.stakeAccounts.addAll(stakeAccounts);
+    }
+    return _result;
+  }
+  factory DeactivateAllStake.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DeactivateAllStake.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  DeactivateAllStake clone() => DeactivateAllStake()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  DeactivateAllStake copyWith(void Function(DeactivateAllStake) updates) => super.copyWith((message) => updates(message as DeactivateAllStake)) as DeactivateAllStake; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static DeactivateAllStake create() => DeactivateAllStake._();
+  DeactivateAllStake createEmptyInstance() => create();
+  static $pb.PbList<DeactivateAllStake> createRepeated() => $pb.PbList<DeactivateAllStake>();
+  @$core.pragma('dart2js:noInline')
+  static DeactivateAllStake getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeactivateAllStake>(create);
+  static DeactivateAllStake? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get stakeAccounts => $_getList(0);
 }
 
 class WithdrawStake extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'WithdrawStake', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
-    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'validatorPubkey')
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stakeAccount')
     ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
   WithdrawStake._() : super();
-  factory WithdrawStake() => create();
+  factory WithdrawStake({
+    $core.String? stakeAccount,
+    $fixnum.Int64? value,
+  }) {
+    final _result = create();
+    if (stakeAccount != null) {
+      _result.stakeAccount = stakeAccount;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
   factory WithdrawStake.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory WithdrawStake.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -167,7 +266,7 @@ class WithdrawStake extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  WithdrawStake copyWith(void Function(WithdrawStake) updates) => super.copyWith((message) => updates(message as WithdrawStake)); // ignore: deprecated_member_use
+  WithdrawStake copyWith(void Function(WithdrawStake) updates) => super.copyWith((message) => updates(message as WithdrawStake)) as WithdrawStake; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static WithdrawStake create() => WithdrawStake._();
@@ -175,16 +274,16 @@ class WithdrawStake extends $pb.GeneratedMessage {
   static $pb.PbList<WithdrawStake> createRepeated() => $pb.PbList<WithdrawStake>();
   @$core.pragma('dart2js:noInline')
   static WithdrawStake getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WithdrawStake>(create);
-  static WithdrawStake _defaultInstance;
+  static WithdrawStake? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get validatorPubkey => $_getSZ(0);
+  $core.String get stakeAccount => $_getSZ(0);
   @$pb.TagNumber(1)
-  set validatorPubkey($core.String v) { $_setString(0, v); }
+  set stakeAccount($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
-  $core.bool hasValidatorPubkey() => $_has(0);
+  $core.bool hasStakeAccount() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValidatorPubkey() => clearField(1);
+  void clearStakeAccount() => clearField(1);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get value => $_getI64(1);
@@ -196,6 +295,108 @@ class WithdrawStake extends $pb.GeneratedMessage {
   void clearValue() => clearField(2);
 }
 
+class StakeAccountValue extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'StakeAccountValue', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
+    ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stakeAccount')
+    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  StakeAccountValue._() : super();
+  factory StakeAccountValue({
+    $core.String? stakeAccount,
+    $fixnum.Int64? value,
+  }) {
+    final _result = create();
+    if (stakeAccount != null) {
+      _result.stakeAccount = stakeAccount;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
+  factory StakeAccountValue.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory StakeAccountValue.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  StakeAccountValue clone() => StakeAccountValue()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  StakeAccountValue copyWith(void Function(StakeAccountValue) updates) => super.copyWith((message) => updates(message as StakeAccountValue)) as StakeAccountValue; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static StakeAccountValue create() => StakeAccountValue._();
+  StakeAccountValue createEmptyInstance() => create();
+  static $pb.PbList<StakeAccountValue> createRepeated() => $pb.PbList<StakeAccountValue>();
+  @$core.pragma('dart2js:noInline')
+  static StakeAccountValue getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StakeAccountValue>(create);
+  static StakeAccountValue? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get stakeAccount => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set stakeAccount($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasStakeAccount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearStakeAccount() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get value => $_getI64(1);
+  @$pb.TagNumber(2)
+  set value($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearValue() => clearField(2);
+}
+
+class WithdrawAllStake extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'WithdrawAllStake', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
+    ..pc<StakeAccountValue>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stakeAccounts', $pb.PbFieldType.PM, subBuilder: StakeAccountValue.create)
+    ..hasRequiredFields = false
+  ;
+
+  WithdrawAllStake._() : super();
+  factory WithdrawAllStake({
+    $core.Iterable<StakeAccountValue>? stakeAccounts,
+  }) {
+    final _result = create();
+    if (stakeAccounts != null) {
+      _result.stakeAccounts.addAll(stakeAccounts);
+    }
+    return _result;
+  }
+  factory WithdrawAllStake.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory WithdrawAllStake.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  WithdrawAllStake clone() => WithdrawAllStake()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  WithdrawAllStake copyWith(void Function(WithdrawAllStake) updates) => super.copyWith((message) => updates(message as WithdrawAllStake)) as WithdrawAllStake; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static WithdrawAllStake create() => WithdrawAllStake._();
+  WithdrawAllStake createEmptyInstance() => create();
+  static $pb.PbList<WithdrawAllStake> createRepeated() => $pb.PbList<WithdrawAllStake>();
+  @$core.pragma('dart2js:noInline')
+  static WithdrawAllStake getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WithdrawAllStake>(create);
+  static WithdrawAllStake? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<StakeAccountValue> get stakeAccounts => $_getList(0);
+}
+
 class CreateTokenAccount extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CreateTokenAccount', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mainAddress')
@@ -205,7 +406,23 @@ class CreateTokenAccount extends $pb.GeneratedMessage {
   ;
 
   CreateTokenAccount._() : super();
-  factory CreateTokenAccount() => create();
+  factory CreateTokenAccount({
+    $core.String? mainAddress,
+    $core.String? tokenMintAddress,
+    $core.String? tokenAddress,
+  }) {
+    final _result = create();
+    if (mainAddress != null) {
+      _result.mainAddress = mainAddress;
+    }
+    if (tokenMintAddress != null) {
+      _result.tokenMintAddress = tokenMintAddress;
+    }
+    if (tokenAddress != null) {
+      _result.tokenAddress = tokenAddress;
+    }
+    return _result;
+  }
   factory CreateTokenAccount.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CreateTokenAccount.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -217,7 +434,7 @@ class CreateTokenAccount extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CreateTokenAccount copyWith(void Function(CreateTokenAccount) updates) => super.copyWith((message) => updates(message as CreateTokenAccount)); // ignore: deprecated_member_use
+  CreateTokenAccount copyWith(void Function(CreateTokenAccount) updates) => super.copyWith((message) => updates(message as CreateTokenAccount)) as CreateTokenAccount; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CreateTokenAccount create() => CreateTokenAccount._();
@@ -225,7 +442,7 @@ class CreateTokenAccount extends $pb.GeneratedMessage {
   static $pb.PbList<CreateTokenAccount> createRepeated() => $pb.PbList<CreateTokenAccount>();
   @$core.pragma('dart2js:noInline')
   static CreateTokenAccount getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateTokenAccount>(create);
-  static CreateTokenAccount _defaultInstance;
+  static CreateTokenAccount? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get mainAddress => $_getSZ(0);
@@ -266,7 +483,31 @@ class TokenTransfer extends $pb.GeneratedMessage {
   ;
 
   TokenTransfer._() : super();
-  factory TokenTransfer() => create();
+  factory TokenTransfer({
+    $core.String? tokenMintAddress,
+    $core.String? senderTokenAddress,
+    $core.String? recipientTokenAddress,
+    $fixnum.Int64? amount,
+    $core.int? decimals,
+  }) {
+    final _result = create();
+    if (tokenMintAddress != null) {
+      _result.tokenMintAddress = tokenMintAddress;
+    }
+    if (senderTokenAddress != null) {
+      _result.senderTokenAddress = senderTokenAddress;
+    }
+    if (recipientTokenAddress != null) {
+      _result.recipientTokenAddress = recipientTokenAddress;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (decimals != null) {
+      _result.decimals = decimals;
+    }
+    return _result;
+  }
   factory TokenTransfer.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TokenTransfer.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -278,7 +519,7 @@ class TokenTransfer extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TokenTransfer copyWith(void Function(TokenTransfer) updates) => super.copyWith((message) => updates(message as TokenTransfer)); // ignore: deprecated_member_use
+  TokenTransfer copyWith(void Function(TokenTransfer) updates) => super.copyWith((message) => updates(message as TokenTransfer)) as TokenTransfer; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TokenTransfer create() => TokenTransfer._();
@@ -286,7 +527,7 @@ class TokenTransfer extends $pb.GeneratedMessage {
   static $pb.PbList<TokenTransfer> createRepeated() => $pb.PbList<TokenTransfer>();
   @$core.pragma('dart2js:noInline')
   static TokenTransfer getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TokenTransfer>(create);
-  static TokenTransfer _defaultInstance;
+  static TokenTransfer? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get tokenMintAddress => $_getSZ(0);
@@ -346,7 +587,35 @@ class CreateAndTransferToken extends $pb.GeneratedMessage {
   ;
 
   CreateAndTransferToken._() : super();
-  factory CreateAndTransferToken() => create();
+  factory CreateAndTransferToken({
+    $core.String? recipientMainAddress,
+    $core.String? tokenMintAddress,
+    $core.String? recipientTokenAddress,
+    $core.String? senderTokenAddress,
+    $fixnum.Int64? amount,
+    $core.int? decimals,
+  }) {
+    final _result = create();
+    if (recipientMainAddress != null) {
+      _result.recipientMainAddress = recipientMainAddress;
+    }
+    if (tokenMintAddress != null) {
+      _result.tokenMintAddress = tokenMintAddress;
+    }
+    if (recipientTokenAddress != null) {
+      _result.recipientTokenAddress = recipientTokenAddress;
+    }
+    if (senderTokenAddress != null) {
+      _result.senderTokenAddress = senderTokenAddress;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (decimals != null) {
+      _result.decimals = decimals;
+    }
+    return _result;
+  }
   factory CreateAndTransferToken.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CreateAndTransferToken.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -358,7 +627,7 @@ class CreateAndTransferToken extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CreateAndTransferToken copyWith(void Function(CreateAndTransferToken) updates) => super.copyWith((message) => updates(message as CreateAndTransferToken)); // ignore: deprecated_member_use
+  CreateAndTransferToken copyWith(void Function(CreateAndTransferToken) updates) => super.copyWith((message) => updates(message as CreateAndTransferToken)) as CreateAndTransferToken; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CreateAndTransferToken create() => CreateAndTransferToken._();
@@ -366,7 +635,7 @@ class CreateAndTransferToken extends $pb.GeneratedMessage {
   static $pb.PbList<CreateAndTransferToken> createRepeated() => $pb.PbList<CreateAndTransferToken>();
   @$core.pragma('dart2js:noInline')
   static CreateAndTransferToken getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateAndTransferToken>(create);
-  static CreateAndTransferToken _defaultInstance;
+  static CreateAndTransferToken? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get recipientMainAddress => $_getSZ(0);
@@ -425,9 +694,11 @@ class CreateAndTransferToken extends $pb.GeneratedMessage {
 
 enum SigningInput_TransactionType {
   transferTransaction, 
-  stakeTransaction, 
+  delegateStakeTransaction, 
   deactivateStakeTransaction, 
+  deactivateAllStakeTransaction, 
   withdrawTransaction, 
+  withdrawAllTransaction, 
   createTokenAccountTransaction, 
   tokenTransferTransaction, 
   createAndTransferTokenTransaction, 
@@ -437,30 +708,82 @@ enum SigningInput_TransactionType {
 class SigningInput extends $pb.GeneratedMessage {
   static const $core.Map<$core.int, SigningInput_TransactionType> _SigningInput_TransactionTypeByTag = {
     3 : SigningInput_TransactionType.transferTransaction,
-    4 : SigningInput_TransactionType.stakeTransaction,
+    4 : SigningInput_TransactionType.delegateStakeTransaction,
     5 : SigningInput_TransactionType.deactivateStakeTransaction,
-    6 : SigningInput_TransactionType.withdrawTransaction,
-    7 : SigningInput_TransactionType.createTokenAccountTransaction,
-    8 : SigningInput_TransactionType.tokenTransferTransaction,
-    9 : SigningInput_TransactionType.createAndTransferTokenTransaction,
+    6 : SigningInput_TransactionType.deactivateAllStakeTransaction,
+    7 : SigningInput_TransactionType.withdrawTransaction,
+    8 : SigningInput_TransactionType.withdrawAllTransaction,
+    9 : SigningInput_TransactionType.createTokenAccountTransaction,
+    10 : SigningInput_TransactionType.tokenTransferTransaction,
+    11 : SigningInput_TransactionType.createAndTransferTokenTransaction,
     0 : SigningInput_TransactionType.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningInput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Solana.Proto'), createEmptyInstance: create)
-    ..oo(0, [3, 4, 5, 6, 7, 8, 9])
+    ..oo(0, [3, 4, 5, 6, 7, 8, 9, 10, 11])
     ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'privateKey', $pb.PbFieldType.OY)
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'recentBlockhash')
     ..aOM<Transfer>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transferTransaction', subBuilder: Transfer.create)
-    ..aOM<Stake>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stakeTransaction', subBuilder: Stake.create)
+    ..aOM<DelegateStake>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'delegateStakeTransaction', subBuilder: DelegateStake.create)
     ..aOM<DeactivateStake>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deactivateStakeTransaction', subBuilder: DeactivateStake.create)
-    ..aOM<WithdrawStake>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'withdrawTransaction', subBuilder: WithdrawStake.create)
-    ..aOM<CreateTokenAccount>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createTokenAccountTransaction', subBuilder: CreateTokenAccount.create)
-    ..aOM<TokenTransfer>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tokenTransferTransaction', subBuilder: TokenTransfer.create)
-    ..aOM<CreateAndTransferToken>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createAndTransferTokenTransaction', subBuilder: CreateAndTransferToken.create)
+    ..aOM<DeactivateAllStake>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deactivateAllStakeTransaction', subBuilder: DeactivateAllStake.create)
+    ..aOM<WithdrawStake>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'withdrawTransaction', subBuilder: WithdrawStake.create)
+    ..aOM<WithdrawAllStake>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'withdrawAllTransaction', subBuilder: WithdrawAllStake.create)
+    ..aOM<CreateTokenAccount>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createTokenAccountTransaction', subBuilder: CreateTokenAccount.create)
+    ..aOM<TokenTransfer>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'tokenTransferTransaction', subBuilder: TokenTransfer.create)
+    ..aOM<CreateAndTransferToken>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createAndTransferTokenTransaction', subBuilder: CreateAndTransferToken.create)
     ..hasRequiredFields = false
   ;
 
   SigningInput._() : super();
-  factory SigningInput() => create();
+  factory SigningInput({
+    $core.List<$core.int>? privateKey,
+    $core.String? recentBlockhash,
+    Transfer? transferTransaction,
+    DelegateStake? delegateStakeTransaction,
+    DeactivateStake? deactivateStakeTransaction,
+    DeactivateAllStake? deactivateAllStakeTransaction,
+    WithdrawStake? withdrawTransaction,
+    WithdrawAllStake? withdrawAllTransaction,
+    CreateTokenAccount? createTokenAccountTransaction,
+    TokenTransfer? tokenTransferTransaction,
+    CreateAndTransferToken? createAndTransferTokenTransaction,
+  }) {
+    final _result = create();
+    if (privateKey != null) {
+      _result.privateKey = privateKey;
+    }
+    if (recentBlockhash != null) {
+      _result.recentBlockhash = recentBlockhash;
+    }
+    if (transferTransaction != null) {
+      _result.transferTransaction = transferTransaction;
+    }
+    if (delegateStakeTransaction != null) {
+      _result.delegateStakeTransaction = delegateStakeTransaction;
+    }
+    if (deactivateStakeTransaction != null) {
+      _result.deactivateStakeTransaction = deactivateStakeTransaction;
+    }
+    if (deactivateAllStakeTransaction != null) {
+      _result.deactivateAllStakeTransaction = deactivateAllStakeTransaction;
+    }
+    if (withdrawTransaction != null) {
+      _result.withdrawTransaction = withdrawTransaction;
+    }
+    if (withdrawAllTransaction != null) {
+      _result.withdrawAllTransaction = withdrawAllTransaction;
+    }
+    if (createTokenAccountTransaction != null) {
+      _result.createTokenAccountTransaction = createTokenAccountTransaction;
+    }
+    if (tokenTransferTransaction != null) {
+      _result.tokenTransferTransaction = tokenTransferTransaction;
+    }
+    if (createAndTransferTokenTransaction != null) {
+      _result.createAndTransferTokenTransaction = createAndTransferTokenTransaction;
+    }
+    return _result;
+  }
   factory SigningInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -472,7 +795,7 @@ class SigningInput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)); // ignore: deprecated_member_use
+  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningInput create() => SigningInput._();
@@ -480,9 +803,9 @@ class SigningInput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningInput> createRepeated() => $pb.PbList<SigningInput>();
   @$core.pragma('dart2js:noInline')
   static SigningInput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningInput>(create);
-  static SigningInput _defaultInstance;
+  static SigningInput? _defaultInstance;
 
-  SigningInput_TransactionType whichTransactionType() => _SigningInput_TransactionTypeByTag[$_whichOneof(0)];
+  SigningInput_TransactionType whichTransactionType() => _SigningInput_TransactionTypeByTag[$_whichOneof(0)]!;
   void clearTransactionType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -515,15 +838,15 @@ class SigningInput extends $pb.GeneratedMessage {
   Transfer ensureTransferTransaction() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  Stake get stakeTransaction => $_getN(3);
+  DelegateStake get delegateStakeTransaction => $_getN(3);
   @$pb.TagNumber(4)
-  set stakeTransaction(Stake v) { setField(4, v); }
+  set delegateStakeTransaction(DelegateStake v) { setField(4, v); }
   @$pb.TagNumber(4)
-  $core.bool hasStakeTransaction() => $_has(3);
+  $core.bool hasDelegateStakeTransaction() => $_has(3);
   @$pb.TagNumber(4)
-  void clearStakeTransaction() => clearField(4);
+  void clearDelegateStakeTransaction() => clearField(4);
   @$pb.TagNumber(4)
-  Stake ensureStakeTransaction() => $_ensure(3);
+  DelegateStake ensureDelegateStakeTransaction() => $_ensure(3);
 
   @$pb.TagNumber(5)
   DeactivateStake get deactivateStakeTransaction => $_getN(4);
@@ -537,48 +860,70 @@ class SigningInput extends $pb.GeneratedMessage {
   DeactivateStake ensureDeactivateStakeTransaction() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  WithdrawStake get withdrawTransaction => $_getN(5);
+  DeactivateAllStake get deactivateAllStakeTransaction => $_getN(5);
   @$pb.TagNumber(6)
-  set withdrawTransaction(WithdrawStake v) { setField(6, v); }
+  set deactivateAllStakeTransaction(DeactivateAllStake v) { setField(6, v); }
   @$pb.TagNumber(6)
-  $core.bool hasWithdrawTransaction() => $_has(5);
+  $core.bool hasDeactivateAllStakeTransaction() => $_has(5);
   @$pb.TagNumber(6)
-  void clearWithdrawTransaction() => clearField(6);
+  void clearDeactivateAllStakeTransaction() => clearField(6);
   @$pb.TagNumber(6)
-  WithdrawStake ensureWithdrawTransaction() => $_ensure(5);
+  DeactivateAllStake ensureDeactivateAllStakeTransaction() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  CreateTokenAccount get createTokenAccountTransaction => $_getN(6);
+  WithdrawStake get withdrawTransaction => $_getN(6);
   @$pb.TagNumber(7)
-  set createTokenAccountTransaction(CreateTokenAccount v) { setField(7, v); }
+  set withdrawTransaction(WithdrawStake v) { setField(7, v); }
   @$pb.TagNumber(7)
-  $core.bool hasCreateTokenAccountTransaction() => $_has(6);
+  $core.bool hasWithdrawTransaction() => $_has(6);
   @$pb.TagNumber(7)
-  void clearCreateTokenAccountTransaction() => clearField(7);
+  void clearWithdrawTransaction() => clearField(7);
   @$pb.TagNumber(7)
-  CreateTokenAccount ensureCreateTokenAccountTransaction() => $_ensure(6);
+  WithdrawStake ensureWithdrawTransaction() => $_ensure(6);
 
   @$pb.TagNumber(8)
-  TokenTransfer get tokenTransferTransaction => $_getN(7);
+  WithdrawAllStake get withdrawAllTransaction => $_getN(7);
   @$pb.TagNumber(8)
-  set tokenTransferTransaction(TokenTransfer v) { setField(8, v); }
+  set withdrawAllTransaction(WithdrawAllStake v) { setField(8, v); }
   @$pb.TagNumber(8)
-  $core.bool hasTokenTransferTransaction() => $_has(7);
+  $core.bool hasWithdrawAllTransaction() => $_has(7);
   @$pb.TagNumber(8)
-  void clearTokenTransferTransaction() => clearField(8);
+  void clearWithdrawAllTransaction() => clearField(8);
   @$pb.TagNumber(8)
-  TokenTransfer ensureTokenTransferTransaction() => $_ensure(7);
+  WithdrawAllStake ensureWithdrawAllTransaction() => $_ensure(7);
 
   @$pb.TagNumber(9)
-  CreateAndTransferToken get createAndTransferTokenTransaction => $_getN(8);
+  CreateTokenAccount get createTokenAccountTransaction => $_getN(8);
   @$pb.TagNumber(9)
-  set createAndTransferTokenTransaction(CreateAndTransferToken v) { setField(9, v); }
+  set createTokenAccountTransaction(CreateTokenAccount v) { setField(9, v); }
   @$pb.TagNumber(9)
-  $core.bool hasCreateAndTransferTokenTransaction() => $_has(8);
+  $core.bool hasCreateTokenAccountTransaction() => $_has(8);
   @$pb.TagNumber(9)
-  void clearCreateAndTransferTokenTransaction() => clearField(9);
+  void clearCreateTokenAccountTransaction() => clearField(9);
   @$pb.TagNumber(9)
-  CreateAndTransferToken ensureCreateAndTransferTokenTransaction() => $_ensure(8);
+  CreateTokenAccount ensureCreateTokenAccountTransaction() => $_ensure(8);
+
+  @$pb.TagNumber(10)
+  TokenTransfer get tokenTransferTransaction => $_getN(9);
+  @$pb.TagNumber(10)
+  set tokenTransferTransaction(TokenTransfer v) { setField(10, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasTokenTransferTransaction() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearTokenTransferTransaction() => clearField(10);
+  @$pb.TagNumber(10)
+  TokenTransfer ensureTokenTransferTransaction() => $_ensure(9);
+
+  @$pb.TagNumber(11)
+  CreateAndTransferToken get createAndTransferTokenTransaction => $_getN(10);
+  @$pb.TagNumber(11)
+  set createAndTransferTokenTransaction(CreateAndTransferToken v) { setField(11, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasCreateAndTransferTokenTransaction() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearCreateAndTransferTokenTransaction() => clearField(11);
+  @$pb.TagNumber(11)
+  CreateAndTransferToken ensureCreateAndTransferTokenTransaction() => $_ensure(10);
 }
 
 class SigningOutput extends $pb.GeneratedMessage {
@@ -588,7 +933,15 @@ class SigningOutput extends $pb.GeneratedMessage {
   ;
 
   SigningOutput._() : super();
-  factory SigningOutput() => create();
+  factory SigningOutput({
+    $core.String? encoded,
+  }) {
+    final _result = create();
+    if (encoded != null) {
+      _result.encoded = encoded;
+    }
+    return _result;
+  }
   factory SigningOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -600,7 +953,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)); // ignore: deprecated_member_use
+  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningOutput create() => SigningOutput._();
@@ -608,7 +961,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningOutput> createRepeated() => $pb.PbList<SigningOutput>();
   @$core.pragma('dart2js:noInline')
   static SigningOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningOutput>(create);
-  static SigningOutput _defaultInstance;
+  static SigningOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get encoded => $_getSZ(0);

@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: Decred.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
@@ -26,7 +26,35 @@ class Transaction extends $pb.GeneratedMessage {
   ;
 
   Transaction._() : super();
-  factory Transaction() => create();
+  factory Transaction({
+    $core.int? serializeType,
+    $core.int? version,
+    $core.Iterable<TransactionInput>? inputs,
+    $core.Iterable<TransactionOutput>? outputs,
+    $core.int? lockTime,
+    $core.int? expiry,
+  }) {
+    final _result = create();
+    if (serializeType != null) {
+      _result.serializeType = serializeType;
+    }
+    if (version != null) {
+      _result.version = version;
+    }
+    if (inputs != null) {
+      _result.inputs.addAll(inputs);
+    }
+    if (outputs != null) {
+      _result.outputs.addAll(outputs);
+    }
+    if (lockTime != null) {
+      _result.lockTime = lockTime;
+    }
+    if (expiry != null) {
+      _result.expiry = expiry;
+    }
+    return _result;
+  }
   factory Transaction.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Transaction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -38,7 +66,7 @@ class Transaction extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Transaction copyWith(void Function(Transaction) updates) => super.copyWith((message) => updates(message as Transaction)); // ignore: deprecated_member_use
+  Transaction copyWith(void Function(Transaction) updates) => super.copyWith((message) => updates(message as Transaction)) as Transaction; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Transaction create() => Transaction._();
@@ -46,7 +74,7 @@ class Transaction extends $pb.GeneratedMessage {
   static $pb.PbList<Transaction> createRepeated() => $pb.PbList<Transaction>();
   @$core.pragma('dart2js:noInline')
   static Transaction getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Transaction>(create);
-  static Transaction _defaultInstance;
+  static Transaction? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get serializeType => $_getIZ(0);
@@ -103,7 +131,35 @@ class TransactionInput extends $pb.GeneratedMessage {
   ;
 
   TransactionInput._() : super();
-  factory TransactionInput() => create();
+  factory TransactionInput({
+    $1.OutPoint? previousOutput,
+    $core.int? sequence,
+    $fixnum.Int64? valueIn,
+    $core.int? blockHeight,
+    $core.int? blockIndex,
+    $core.List<$core.int>? script,
+  }) {
+    final _result = create();
+    if (previousOutput != null) {
+      _result.previousOutput = previousOutput;
+    }
+    if (sequence != null) {
+      _result.sequence = sequence;
+    }
+    if (valueIn != null) {
+      _result.valueIn = valueIn;
+    }
+    if (blockHeight != null) {
+      _result.blockHeight = blockHeight;
+    }
+    if (blockIndex != null) {
+      _result.blockIndex = blockIndex;
+    }
+    if (script != null) {
+      _result.script = script;
+    }
+    return _result;
+  }
   factory TransactionInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransactionInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -115,7 +171,7 @@ class TransactionInput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TransactionInput copyWith(void Function(TransactionInput) updates) => super.copyWith((message) => updates(message as TransactionInput)); // ignore: deprecated_member_use
+  TransactionInput copyWith(void Function(TransactionInput) updates) => super.copyWith((message) => updates(message as TransactionInput)) as TransactionInput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransactionInput create() => TransactionInput._();
@@ -123,7 +179,7 @@ class TransactionInput extends $pb.GeneratedMessage {
   static $pb.PbList<TransactionInput> createRepeated() => $pb.PbList<TransactionInput>();
   @$core.pragma('dart2js:noInline')
   static TransactionInput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransactionInput>(create);
-  static TransactionInput _defaultInstance;
+  static TransactionInput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $1.OutPoint get previousOutput => $_getN(0);
@@ -191,7 +247,23 @@ class TransactionOutput extends $pb.GeneratedMessage {
   ;
 
   TransactionOutput._() : super();
-  factory TransactionOutput() => create();
+  factory TransactionOutput({
+    $fixnum.Int64? value,
+    $core.int? version,
+    $core.List<$core.int>? script,
+  }) {
+    final _result = create();
+    if (value != null) {
+      _result.value = value;
+    }
+    if (version != null) {
+      _result.version = version;
+    }
+    if (script != null) {
+      _result.script = script;
+    }
+    return _result;
+  }
   factory TransactionOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransactionOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -203,7 +275,7 @@ class TransactionOutput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TransactionOutput copyWith(void Function(TransactionOutput) updates) => super.copyWith((message) => updates(message as TransactionOutput)); // ignore: deprecated_member_use
+  TransactionOutput copyWith(void Function(TransactionOutput) updates) => super.copyWith((message) => updates(message as TransactionOutput)) as TransactionOutput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransactionOutput create() => TransactionOutput._();
@@ -211,7 +283,7 @@ class TransactionOutput extends $pb.GeneratedMessage {
   static $pb.PbList<TransactionOutput> createRepeated() => $pb.PbList<TransactionOutput>();
   @$core.pragma('dart2js:noInline')
   static TransactionOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransactionOutput>(create);
-  static TransactionOutput _defaultInstance;
+  static TransactionOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get value => $_getI64(0);
@@ -251,7 +323,27 @@ class SigningOutput extends $pb.GeneratedMessage {
   ;
 
   SigningOutput._() : super();
-  factory SigningOutput() => create();
+  factory SigningOutput({
+    Transaction? transaction,
+    $core.List<$core.int>? encoded,
+    $core.String? transactionId,
+    $0.SigningError? error,
+  }) {
+    final _result = create();
+    if (transaction != null) {
+      _result.transaction = transaction;
+    }
+    if (encoded != null) {
+      _result.encoded = encoded;
+    }
+    if (transactionId != null) {
+      _result.transactionId = transactionId;
+    }
+    if (error != null) {
+      _result.error = error;
+    }
+    return _result;
+  }
   factory SigningOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -263,7 +355,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)); // ignore: deprecated_member_use
+  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningOutput create() => SigningOutput._();
@@ -271,7 +363,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningOutput> createRepeated() => $pb.PbList<SigningOutput>();
   @$core.pragma('dart2js:noInline')
   static SigningOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningOutput>(create);
-  static SigningOutput _defaultInstance;
+  static SigningOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
   Transaction get transaction => $_getN(0);

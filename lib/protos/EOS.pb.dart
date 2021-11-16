@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: EOS.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
@@ -24,7 +24,23 @@ class Asset extends $pb.GeneratedMessage {
   ;
 
   Asset._() : super();
-  factory Asset() => create();
+  factory Asset({
+    $fixnum.Int64? amount,
+    $core.int? decimals,
+    $core.String? symbol,
+  }) {
+    final _result = create();
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (decimals != null) {
+      _result.decimals = decimals;
+    }
+    if (symbol != null) {
+      _result.symbol = symbol;
+    }
+    return _result;
+  }
   factory Asset.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Asset.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -36,7 +52,7 @@ class Asset extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Asset copyWith(void Function(Asset) updates) => super.copyWith((message) => updates(message as Asset)); // ignore: deprecated_member_use
+  Asset copyWith(void Function(Asset) updates) => super.copyWith((message) => updates(message as Asset)) as Asset; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Asset create() => Asset._();
@@ -44,7 +60,7 @@ class Asset extends $pb.GeneratedMessage {
   static $pb.PbList<Asset> createRepeated() => $pb.PbList<Asset>();
   @$core.pragma('dart2js:noInline')
   static Asset getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Asset>(create);
-  static Asset _defaultInstance;
+  static Asset? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get amount => $_getI64(0);
@@ -90,7 +106,51 @@ class SigningInput extends $pb.GeneratedMessage {
   ;
 
   SigningInput._() : super();
-  factory SigningInput() => create();
+  factory SigningInput({
+    $core.List<$core.int>? chainId,
+    $core.List<$core.int>? referenceBlockId,
+    $core.int? referenceBlockTime,
+    $core.String? currency,
+    $core.String? sender,
+    $core.String? recipient,
+    $core.String? memo,
+    Asset? asset,
+    $core.List<$core.int>? privateKey,
+    KeyType? privateKeyType,
+  }) {
+    final _result = create();
+    if (chainId != null) {
+      _result.chainId = chainId;
+    }
+    if (referenceBlockId != null) {
+      _result.referenceBlockId = referenceBlockId;
+    }
+    if (referenceBlockTime != null) {
+      _result.referenceBlockTime = referenceBlockTime;
+    }
+    if (currency != null) {
+      _result.currency = currency;
+    }
+    if (sender != null) {
+      _result.sender = sender;
+    }
+    if (recipient != null) {
+      _result.recipient = recipient;
+    }
+    if (memo != null) {
+      _result.memo = memo;
+    }
+    if (asset != null) {
+      _result.asset = asset;
+    }
+    if (privateKey != null) {
+      _result.privateKey = privateKey;
+    }
+    if (privateKeyType != null) {
+      _result.privateKeyType = privateKeyType;
+    }
+    return _result;
+  }
   factory SigningInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -102,7 +162,7 @@ class SigningInput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)); // ignore: deprecated_member_use
+  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningInput create() => SigningInput._();
@@ -110,7 +170,7 @@ class SigningInput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningInput> createRepeated() => $pb.PbList<SigningInput>();
   @$core.pragma('dart2js:noInline')
   static SigningInput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningInput>(create);
-  static SigningInput _defaultInstance;
+  static SigningInput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get chainId => $_getN(0);
@@ -213,7 +273,19 @@ class SigningOutput extends $pb.GeneratedMessage {
   ;
 
   SigningOutput._() : super();
-  factory SigningOutput() => create();
+  factory SigningOutput({
+    $core.String? jsonEncoded,
+    $0.SigningError? error,
+  }) {
+    final _result = create();
+    if (jsonEncoded != null) {
+      _result.jsonEncoded = jsonEncoded;
+    }
+    if (error != null) {
+      _result.error = error;
+    }
+    return _result;
+  }
   factory SigningOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -225,7 +297,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)); // ignore: deprecated_member_use
+  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningOutput create() => SigningOutput._();
@@ -233,7 +305,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningOutput> createRepeated() => $pb.PbList<SigningOutput>();
   @$core.pragma('dart2js:noInline')
   static SigningOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningOutput>(create);
-  static SigningOutput _defaultInstance;
+  static SigningOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get jsonEncoded => $_getSZ(0);

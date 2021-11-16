@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: IoTeX.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
@@ -19,7 +19,23 @@ class Transfer extends $pb.GeneratedMessage {
   ;
 
   Transfer._() : super();
-  factory Transfer() => create();
+  factory Transfer({
+    $core.String? amount,
+    $core.String? recipient,
+    $core.List<$core.int>? payload,
+  }) {
+    final _result = create();
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (recipient != null) {
+      _result.recipient = recipient;
+    }
+    if (payload != null) {
+      _result.payload = payload;
+    }
+    return _result;
+  }
   factory Transfer.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Transfer.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -31,7 +47,7 @@ class Transfer extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Transfer copyWith(void Function(Transfer) updates) => super.copyWith((message) => updates(message as Transfer)); // ignore: deprecated_member_use
+  Transfer copyWith(void Function(Transfer) updates) => super.copyWith((message) => updates(message as Transfer)) as Transfer; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Transfer create() => Transfer._();
@@ -39,7 +55,7 @@ class Transfer extends $pb.GeneratedMessage {
   static $pb.PbList<Transfer> createRepeated() => $pb.PbList<Transfer>();
   @$core.pragma('dart2js:noInline')
   static Transfer getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Transfer>(create);
-  static Transfer _defaultInstance;
+  static Transfer? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get amount => $_getSZ(0);
@@ -80,7 +96,31 @@ class Staking_Create extends $pb.GeneratedMessage {
   ;
 
   Staking_Create._() : super();
-  factory Staking_Create() => create();
+  factory Staking_Create({
+    $core.String? candidateName,
+    $core.String? stakedAmount,
+    $core.int? stakedDuration,
+    $core.bool? autoStake,
+    $core.List<$core.int>? payload,
+  }) {
+    final _result = create();
+    if (candidateName != null) {
+      _result.candidateName = candidateName;
+    }
+    if (stakedAmount != null) {
+      _result.stakedAmount = stakedAmount;
+    }
+    if (stakedDuration != null) {
+      _result.stakedDuration = stakedDuration;
+    }
+    if (autoStake != null) {
+      _result.autoStake = autoStake;
+    }
+    if (payload != null) {
+      _result.payload = payload;
+    }
+    return _result;
+  }
   factory Staking_Create.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Staking_Create.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -92,7 +132,7 @@ class Staking_Create extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Staking_Create copyWith(void Function(Staking_Create) updates) => super.copyWith((message) => updates(message as Staking_Create)); // ignore: deprecated_member_use
+  Staking_Create copyWith(void Function(Staking_Create) updates) => super.copyWith((message) => updates(message as Staking_Create)) as Staking_Create; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Staking_Create create() => Staking_Create._();
@@ -100,7 +140,7 @@ class Staking_Create extends $pb.GeneratedMessage {
   static $pb.PbList<Staking_Create> createRepeated() => $pb.PbList<Staking_Create>();
   @$core.pragma('dart2js:noInline')
   static Staking_Create getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Staking_Create>(create);
-  static Staking_Create _defaultInstance;
+  static Staking_Create? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get candidateName => $_getSZ(0);
@@ -156,7 +196,19 @@ class Staking_Reclaim extends $pb.GeneratedMessage {
   ;
 
   Staking_Reclaim._() : super();
-  factory Staking_Reclaim() => create();
+  factory Staking_Reclaim({
+    $fixnum.Int64? bucketIndex,
+    $core.List<$core.int>? payload,
+  }) {
+    final _result = create();
+    if (bucketIndex != null) {
+      _result.bucketIndex = bucketIndex;
+    }
+    if (payload != null) {
+      _result.payload = payload;
+    }
+    return _result;
+  }
   factory Staking_Reclaim.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Staking_Reclaim.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -168,7 +220,7 @@ class Staking_Reclaim extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Staking_Reclaim copyWith(void Function(Staking_Reclaim) updates) => super.copyWith((message) => updates(message as Staking_Reclaim)); // ignore: deprecated_member_use
+  Staking_Reclaim copyWith(void Function(Staking_Reclaim) updates) => super.copyWith((message) => updates(message as Staking_Reclaim)) as Staking_Reclaim; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Staking_Reclaim create() => Staking_Reclaim._();
@@ -176,7 +228,7 @@ class Staking_Reclaim extends $pb.GeneratedMessage {
   static $pb.PbList<Staking_Reclaim> createRepeated() => $pb.PbList<Staking_Reclaim>();
   @$core.pragma('dart2js:noInline')
   static Staking_Reclaim getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Staking_Reclaim>(create);
-  static Staking_Reclaim _defaultInstance;
+  static Staking_Reclaim? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get bucketIndex => $_getI64(0);
@@ -206,7 +258,23 @@ class Staking_AddDeposit extends $pb.GeneratedMessage {
   ;
 
   Staking_AddDeposit._() : super();
-  factory Staking_AddDeposit() => create();
+  factory Staking_AddDeposit({
+    $fixnum.Int64? bucketIndex,
+    $core.String? amount,
+    $core.List<$core.int>? payload,
+  }) {
+    final _result = create();
+    if (bucketIndex != null) {
+      _result.bucketIndex = bucketIndex;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (payload != null) {
+      _result.payload = payload;
+    }
+    return _result;
+  }
   factory Staking_AddDeposit.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Staking_AddDeposit.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -218,7 +286,7 @@ class Staking_AddDeposit extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Staking_AddDeposit copyWith(void Function(Staking_AddDeposit) updates) => super.copyWith((message) => updates(message as Staking_AddDeposit)); // ignore: deprecated_member_use
+  Staking_AddDeposit copyWith(void Function(Staking_AddDeposit) updates) => super.copyWith((message) => updates(message as Staking_AddDeposit)) as Staking_AddDeposit; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Staking_AddDeposit create() => Staking_AddDeposit._();
@@ -226,7 +294,7 @@ class Staking_AddDeposit extends $pb.GeneratedMessage {
   static $pb.PbList<Staking_AddDeposit> createRepeated() => $pb.PbList<Staking_AddDeposit>();
   @$core.pragma('dart2js:noInline')
   static Staking_AddDeposit getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Staking_AddDeposit>(create);
-  static Staking_AddDeposit _defaultInstance;
+  static Staking_AddDeposit? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get bucketIndex => $_getI64(0);
@@ -266,7 +334,27 @@ class Staking_Restake extends $pb.GeneratedMessage {
   ;
 
   Staking_Restake._() : super();
-  factory Staking_Restake() => create();
+  factory Staking_Restake({
+    $fixnum.Int64? bucketIndex,
+    $core.int? stakedDuration,
+    $core.bool? autoStake,
+    $core.List<$core.int>? payload,
+  }) {
+    final _result = create();
+    if (bucketIndex != null) {
+      _result.bucketIndex = bucketIndex;
+    }
+    if (stakedDuration != null) {
+      _result.stakedDuration = stakedDuration;
+    }
+    if (autoStake != null) {
+      _result.autoStake = autoStake;
+    }
+    if (payload != null) {
+      _result.payload = payload;
+    }
+    return _result;
+  }
   factory Staking_Restake.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Staking_Restake.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -278,7 +366,7 @@ class Staking_Restake extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Staking_Restake copyWith(void Function(Staking_Restake) updates) => super.copyWith((message) => updates(message as Staking_Restake)); // ignore: deprecated_member_use
+  Staking_Restake copyWith(void Function(Staking_Restake) updates) => super.copyWith((message) => updates(message as Staking_Restake)) as Staking_Restake; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Staking_Restake create() => Staking_Restake._();
@@ -286,7 +374,7 @@ class Staking_Restake extends $pb.GeneratedMessage {
   static $pb.PbList<Staking_Restake> createRepeated() => $pb.PbList<Staking_Restake>();
   @$core.pragma('dart2js:noInline')
   static Staking_Restake getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Staking_Restake>(create);
-  static Staking_Restake _defaultInstance;
+  static Staking_Restake? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get bucketIndex => $_getI64(0);
@@ -334,7 +422,23 @@ class Staking_ChangeCandidate extends $pb.GeneratedMessage {
   ;
 
   Staking_ChangeCandidate._() : super();
-  factory Staking_ChangeCandidate() => create();
+  factory Staking_ChangeCandidate({
+    $fixnum.Int64? bucketIndex,
+    $core.String? candidateName,
+    $core.List<$core.int>? payload,
+  }) {
+    final _result = create();
+    if (bucketIndex != null) {
+      _result.bucketIndex = bucketIndex;
+    }
+    if (candidateName != null) {
+      _result.candidateName = candidateName;
+    }
+    if (payload != null) {
+      _result.payload = payload;
+    }
+    return _result;
+  }
   factory Staking_ChangeCandidate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Staking_ChangeCandidate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -346,7 +450,7 @@ class Staking_ChangeCandidate extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Staking_ChangeCandidate copyWith(void Function(Staking_ChangeCandidate) updates) => super.copyWith((message) => updates(message as Staking_ChangeCandidate)); // ignore: deprecated_member_use
+  Staking_ChangeCandidate copyWith(void Function(Staking_ChangeCandidate) updates) => super.copyWith((message) => updates(message as Staking_ChangeCandidate)) as Staking_ChangeCandidate; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Staking_ChangeCandidate create() => Staking_ChangeCandidate._();
@@ -354,7 +458,7 @@ class Staking_ChangeCandidate extends $pb.GeneratedMessage {
   static $pb.PbList<Staking_ChangeCandidate> createRepeated() => $pb.PbList<Staking_ChangeCandidate>();
   @$core.pragma('dart2js:noInline')
   static Staking_ChangeCandidate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Staking_ChangeCandidate>(create);
-  static Staking_ChangeCandidate _defaultInstance;
+  static Staking_ChangeCandidate? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get bucketIndex => $_getI64(0);
@@ -393,7 +497,23 @@ class Staking_TransferOwnership extends $pb.GeneratedMessage {
   ;
 
   Staking_TransferOwnership._() : super();
-  factory Staking_TransferOwnership() => create();
+  factory Staking_TransferOwnership({
+    $fixnum.Int64? bucketIndex,
+    $core.String? voterAddress,
+    $core.List<$core.int>? payload,
+  }) {
+    final _result = create();
+    if (bucketIndex != null) {
+      _result.bucketIndex = bucketIndex;
+    }
+    if (voterAddress != null) {
+      _result.voterAddress = voterAddress;
+    }
+    if (payload != null) {
+      _result.payload = payload;
+    }
+    return _result;
+  }
   factory Staking_TransferOwnership.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Staking_TransferOwnership.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -405,7 +525,7 @@ class Staking_TransferOwnership extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Staking_TransferOwnership copyWith(void Function(Staking_TransferOwnership) updates) => super.copyWith((message) => updates(message as Staking_TransferOwnership)); // ignore: deprecated_member_use
+  Staking_TransferOwnership copyWith(void Function(Staking_TransferOwnership) updates) => super.copyWith((message) => updates(message as Staking_TransferOwnership)) as Staking_TransferOwnership; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Staking_TransferOwnership create() => Staking_TransferOwnership._();
@@ -413,7 +533,7 @@ class Staking_TransferOwnership extends $pb.GeneratedMessage {
   static $pb.PbList<Staking_TransferOwnership> createRepeated() => $pb.PbList<Staking_TransferOwnership>();
   @$core.pragma('dart2js:noInline')
   static Staking_TransferOwnership getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Staking_TransferOwnership>(create);
-  static Staking_TransferOwnership _defaultInstance;
+  static Staking_TransferOwnership? _defaultInstance;
 
   @$pb.TagNumber(1)
   $fixnum.Int64 get bucketIndex => $_getI64(0);
@@ -452,7 +572,23 @@ class Staking_CandidateBasicInfo extends $pb.GeneratedMessage {
   ;
 
   Staking_CandidateBasicInfo._() : super();
-  factory Staking_CandidateBasicInfo() => create();
+  factory Staking_CandidateBasicInfo({
+    $core.String? name,
+    $core.String? operatorAddress,
+    $core.String? rewardAddress,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (operatorAddress != null) {
+      _result.operatorAddress = operatorAddress;
+    }
+    if (rewardAddress != null) {
+      _result.rewardAddress = rewardAddress;
+    }
+    return _result;
+  }
   factory Staking_CandidateBasicInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Staking_CandidateBasicInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -464,7 +600,7 @@ class Staking_CandidateBasicInfo extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Staking_CandidateBasicInfo copyWith(void Function(Staking_CandidateBasicInfo) updates) => super.copyWith((message) => updates(message as Staking_CandidateBasicInfo)); // ignore: deprecated_member_use
+  Staking_CandidateBasicInfo copyWith(void Function(Staking_CandidateBasicInfo) updates) => super.copyWith((message) => updates(message as Staking_CandidateBasicInfo)) as Staking_CandidateBasicInfo; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Staking_CandidateBasicInfo create() => Staking_CandidateBasicInfo._();
@@ -472,7 +608,7 @@ class Staking_CandidateBasicInfo extends $pb.GeneratedMessage {
   static $pb.PbList<Staking_CandidateBasicInfo> createRepeated() => $pb.PbList<Staking_CandidateBasicInfo>();
   @$core.pragma('dart2js:noInline')
   static Staking_CandidateBasicInfo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Staking_CandidateBasicInfo>(create);
-  static Staking_CandidateBasicInfo _defaultInstance;
+  static Staking_CandidateBasicInfo? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -514,7 +650,35 @@ class Staking_CandidateRegister extends $pb.GeneratedMessage {
   ;
 
   Staking_CandidateRegister._() : super();
-  factory Staking_CandidateRegister() => create();
+  factory Staking_CandidateRegister({
+    Staking_CandidateBasicInfo? candidate,
+    $core.String? stakedAmount,
+    $core.int? stakedDuration,
+    $core.bool? autoStake,
+    $core.String? ownerAddress,
+    $core.List<$core.int>? payload,
+  }) {
+    final _result = create();
+    if (candidate != null) {
+      _result.candidate = candidate;
+    }
+    if (stakedAmount != null) {
+      _result.stakedAmount = stakedAmount;
+    }
+    if (stakedDuration != null) {
+      _result.stakedDuration = stakedDuration;
+    }
+    if (autoStake != null) {
+      _result.autoStake = autoStake;
+    }
+    if (ownerAddress != null) {
+      _result.ownerAddress = ownerAddress;
+    }
+    if (payload != null) {
+      _result.payload = payload;
+    }
+    return _result;
+  }
   factory Staking_CandidateRegister.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Staking_CandidateRegister.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -526,7 +690,7 @@ class Staking_CandidateRegister extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Staking_CandidateRegister copyWith(void Function(Staking_CandidateRegister) updates) => super.copyWith((message) => updates(message as Staking_CandidateRegister)); // ignore: deprecated_member_use
+  Staking_CandidateRegister copyWith(void Function(Staking_CandidateRegister) updates) => super.copyWith((message) => updates(message as Staking_CandidateRegister)) as Staking_CandidateRegister; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Staking_CandidateRegister create() => Staking_CandidateRegister._();
@@ -534,7 +698,7 @@ class Staking_CandidateRegister extends $pb.GeneratedMessage {
   static $pb.PbList<Staking_CandidateRegister> createRepeated() => $pb.PbList<Staking_CandidateRegister>();
   @$core.pragma('dart2js:noInline')
   static Staking_CandidateRegister getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Staking_CandidateRegister>(create);
-  static Staking_CandidateRegister _defaultInstance;
+  static Staking_CandidateRegister? _defaultInstance;
 
   @$pb.TagNumber(1)
   Staking_CandidateBasicInfo get candidate => $_getN(0);
@@ -634,7 +798,47 @@ class Staking extends $pb.GeneratedMessage {
   ;
 
   Staking._() : super();
-  factory Staking() => create();
+  factory Staking({
+    Staking_Create? stakeCreate,
+    Staking_Reclaim? stakeUnstake,
+    Staking_Reclaim? stakeWithdraw,
+    Staking_AddDeposit? stakeAddDeposit,
+    Staking_Restake? stakeRestake,
+    Staking_ChangeCandidate? stakeChangeCandidate,
+    Staking_TransferOwnership? stakeTransferOwnership,
+    Staking_CandidateRegister? candidateRegister,
+    Staking_CandidateBasicInfo? candidateUpdate,
+  }) {
+    final _result = create();
+    if (stakeCreate != null) {
+      _result.stakeCreate = stakeCreate;
+    }
+    if (stakeUnstake != null) {
+      _result.stakeUnstake = stakeUnstake;
+    }
+    if (stakeWithdraw != null) {
+      _result.stakeWithdraw = stakeWithdraw;
+    }
+    if (stakeAddDeposit != null) {
+      _result.stakeAddDeposit = stakeAddDeposit;
+    }
+    if (stakeRestake != null) {
+      _result.stakeRestake = stakeRestake;
+    }
+    if (stakeChangeCandidate != null) {
+      _result.stakeChangeCandidate = stakeChangeCandidate;
+    }
+    if (stakeTransferOwnership != null) {
+      _result.stakeTransferOwnership = stakeTransferOwnership;
+    }
+    if (candidateRegister != null) {
+      _result.candidateRegister = candidateRegister;
+    }
+    if (candidateUpdate != null) {
+      _result.candidateUpdate = candidateUpdate;
+    }
+    return _result;
+  }
   factory Staking.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Staking.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -646,7 +850,7 @@ class Staking extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Staking copyWith(void Function(Staking) updates) => super.copyWith((message) => updates(message as Staking)); // ignore: deprecated_member_use
+  Staking copyWith(void Function(Staking) updates) => super.copyWith((message) => updates(message as Staking)) as Staking; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Staking create() => Staking._();
@@ -654,9 +858,9 @@ class Staking extends $pb.GeneratedMessage {
   static $pb.PbList<Staking> createRepeated() => $pb.PbList<Staking>();
   @$core.pragma('dart2js:noInline')
   static Staking getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Staking>(create);
-  static Staking _defaultInstance;
+  static Staking? _defaultInstance;
 
-  Staking_Message whichMessage() => _Staking_MessageByTag[$_whichOneof(0)];
+  Staking_Message whichMessage() => _Staking_MessageByTag[$_whichOneof(0)]!;
   void clearMessage() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -768,7 +972,23 @@ class ContractCall extends $pb.GeneratedMessage {
   ;
 
   ContractCall._() : super();
-  factory ContractCall() => create();
+  factory ContractCall({
+    $core.String? amount,
+    $core.String? contract,
+    $core.List<$core.int>? data,
+  }) {
+    final _result = create();
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (contract != null) {
+      _result.contract = contract;
+    }
+    if (data != null) {
+      _result.data = data;
+    }
+    return _result;
+  }
   factory ContractCall.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ContractCall.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -780,7 +1000,7 @@ class ContractCall extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ContractCall copyWith(void Function(ContractCall) updates) => super.copyWith((message) => updates(message as ContractCall)); // ignore: deprecated_member_use
+  ContractCall copyWith(void Function(ContractCall) updates) => super.copyWith((message) => updates(message as ContractCall)) as ContractCall; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ContractCall create() => ContractCall._();
@@ -788,7 +1008,7 @@ class ContractCall extends $pb.GeneratedMessage {
   static $pb.PbList<ContractCall> createRepeated() => $pb.PbList<ContractCall>();
   @$core.pragma('dart2js:noInline')
   static ContractCall getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ContractCall>(create);
-  static ContractCall _defaultInstance;
+  static ContractCall? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get amount => $_getSZ(0);
@@ -870,7 +1090,75 @@ class SigningInput extends $pb.GeneratedMessage {
   ;
 
   SigningInput._() : super();
-  factory SigningInput() => create();
+  factory SigningInput({
+    $core.int? version,
+    $fixnum.Int64? nonce,
+    $fixnum.Int64? gasLimit,
+    $core.String? gasPrice,
+    $core.List<$core.int>? privateKey,
+    Transfer? transfer,
+    ContractCall? call,
+    Staking_Create? stakeCreate,
+    Staking_Reclaim? stakeUnstake,
+    Staking_Reclaim? stakeWithdraw,
+    Staking_AddDeposit? stakeAddDeposit,
+    Staking_Restake? stakeRestake,
+    Staking_ChangeCandidate? stakeChangeCandidate,
+    Staking_TransferOwnership? stakeTransferOwnership,
+    Staking_CandidateRegister? candidateRegister,
+    Staking_CandidateBasicInfo? candidateUpdate,
+  }) {
+    final _result = create();
+    if (version != null) {
+      _result.version = version;
+    }
+    if (nonce != null) {
+      _result.nonce = nonce;
+    }
+    if (gasLimit != null) {
+      _result.gasLimit = gasLimit;
+    }
+    if (gasPrice != null) {
+      _result.gasPrice = gasPrice;
+    }
+    if (privateKey != null) {
+      _result.privateKey = privateKey;
+    }
+    if (transfer != null) {
+      _result.transfer = transfer;
+    }
+    if (call != null) {
+      _result.call = call;
+    }
+    if (stakeCreate != null) {
+      _result.stakeCreate = stakeCreate;
+    }
+    if (stakeUnstake != null) {
+      _result.stakeUnstake = stakeUnstake;
+    }
+    if (stakeWithdraw != null) {
+      _result.stakeWithdraw = stakeWithdraw;
+    }
+    if (stakeAddDeposit != null) {
+      _result.stakeAddDeposit = stakeAddDeposit;
+    }
+    if (stakeRestake != null) {
+      _result.stakeRestake = stakeRestake;
+    }
+    if (stakeChangeCandidate != null) {
+      _result.stakeChangeCandidate = stakeChangeCandidate;
+    }
+    if (stakeTransferOwnership != null) {
+      _result.stakeTransferOwnership = stakeTransferOwnership;
+    }
+    if (candidateRegister != null) {
+      _result.candidateRegister = candidateRegister;
+    }
+    if (candidateUpdate != null) {
+      _result.candidateUpdate = candidateUpdate;
+    }
+    return _result;
+  }
   factory SigningInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -882,7 +1170,7 @@ class SigningInput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)); // ignore: deprecated_member_use
+  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningInput create() => SigningInput._();
@@ -890,9 +1178,9 @@ class SigningInput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningInput> createRepeated() => $pb.PbList<SigningInput>();
   @$core.pragma('dart2js:noInline')
   static SigningInput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningInput>(create);
-  static SigningInput _defaultInstance;
+  static SigningInput? _defaultInstance;
 
-  SigningInput_Action whichAction() => _SigningInput_ActionByTag[$_whichOneof(0)];
+  SigningInput_Action whichAction() => _SigningInput_ActionByTag[$_whichOneof(0)]!;
   void clearAction() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -1070,7 +1358,19 @@ class SigningOutput extends $pb.GeneratedMessage {
   ;
 
   SigningOutput._() : super();
-  factory SigningOutput() => create();
+  factory SigningOutput({
+    $core.List<$core.int>? encoded,
+    $core.List<$core.int>? hash,
+  }) {
+    final _result = create();
+    if (encoded != null) {
+      _result.encoded = encoded;
+    }
+    if (hash != null) {
+      _result.hash = hash;
+    }
+    return _result;
+  }
   factory SigningOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1082,7 +1382,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)); // ignore: deprecated_member_use
+  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningOutput create() => SigningOutput._();
@@ -1090,7 +1390,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningOutput> createRepeated() => $pb.PbList<SigningOutput>();
   @$core.pragma('dart2js:noInline')
   static SigningOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningOutput>(create);
-  static SigningOutput _defaultInstance;
+  static SigningOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get encoded => $_getN(0);
@@ -1162,7 +1462,71 @@ class ActionCore extends $pb.GeneratedMessage {
   ;
 
   ActionCore._() : super();
-  factory ActionCore() => create();
+  factory ActionCore({
+    $core.int? version,
+    $fixnum.Int64? nonce,
+    $fixnum.Int64? gasLimit,
+    $core.String? gasPrice,
+    Transfer? transfer,
+    ContractCall? execution,
+    Staking_Create? stakeCreate,
+    Staking_Reclaim? stakeUnstake,
+    Staking_Reclaim? stakeWithdraw,
+    Staking_AddDeposit? stakeAddDeposit,
+    Staking_Restake? stakeRestake,
+    Staking_ChangeCandidate? stakeChangeCandidate,
+    Staking_TransferOwnership? stakeTransferOwnership,
+    Staking_CandidateRegister? candidateRegister,
+    Staking_CandidateBasicInfo? candidateUpdate,
+  }) {
+    final _result = create();
+    if (version != null) {
+      _result.version = version;
+    }
+    if (nonce != null) {
+      _result.nonce = nonce;
+    }
+    if (gasLimit != null) {
+      _result.gasLimit = gasLimit;
+    }
+    if (gasPrice != null) {
+      _result.gasPrice = gasPrice;
+    }
+    if (transfer != null) {
+      _result.transfer = transfer;
+    }
+    if (execution != null) {
+      _result.execution = execution;
+    }
+    if (stakeCreate != null) {
+      _result.stakeCreate = stakeCreate;
+    }
+    if (stakeUnstake != null) {
+      _result.stakeUnstake = stakeUnstake;
+    }
+    if (stakeWithdraw != null) {
+      _result.stakeWithdraw = stakeWithdraw;
+    }
+    if (stakeAddDeposit != null) {
+      _result.stakeAddDeposit = stakeAddDeposit;
+    }
+    if (stakeRestake != null) {
+      _result.stakeRestake = stakeRestake;
+    }
+    if (stakeChangeCandidate != null) {
+      _result.stakeChangeCandidate = stakeChangeCandidate;
+    }
+    if (stakeTransferOwnership != null) {
+      _result.stakeTransferOwnership = stakeTransferOwnership;
+    }
+    if (candidateRegister != null) {
+      _result.candidateRegister = candidateRegister;
+    }
+    if (candidateUpdate != null) {
+      _result.candidateUpdate = candidateUpdate;
+    }
+    return _result;
+  }
   factory ActionCore.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ActionCore.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1174,7 +1538,7 @@ class ActionCore extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ActionCore copyWith(void Function(ActionCore) updates) => super.copyWith((message) => updates(message as ActionCore)); // ignore: deprecated_member_use
+  ActionCore copyWith(void Function(ActionCore) updates) => super.copyWith((message) => updates(message as ActionCore)) as ActionCore; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ActionCore create() => ActionCore._();
@@ -1182,9 +1546,9 @@ class ActionCore extends $pb.GeneratedMessage {
   static $pb.PbList<ActionCore> createRepeated() => $pb.PbList<ActionCore>();
   @$core.pragma('dart2js:noInline')
   static ActionCore getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ActionCore>(create);
-  static ActionCore _defaultInstance;
+  static ActionCore? _defaultInstance;
 
-  ActionCore_Action whichAction() => _ActionCore_ActionByTag[$_whichOneof(0)];
+  ActionCore_Action whichAction() => _ActionCore_ActionByTag[$_whichOneof(0)]!;
   void clearAction() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -1354,7 +1718,23 @@ class Action extends $pb.GeneratedMessage {
   ;
 
   Action._() : super();
-  factory Action() => create();
+  factory Action({
+    ActionCore? core,
+    $core.List<$core.int>? senderPubKey,
+    $core.List<$core.int>? signature,
+  }) {
+    final _result = create();
+    if (core != null) {
+      _result.core = core;
+    }
+    if (senderPubKey != null) {
+      _result.senderPubKey = senderPubKey;
+    }
+    if (signature != null) {
+      _result.signature = signature;
+    }
+    return _result;
+  }
   factory Action.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Action.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1366,7 +1746,7 @@ class Action extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Action copyWith(void Function(Action) updates) => super.copyWith((message) => updates(message as Action)); // ignore: deprecated_member_use
+  Action copyWith(void Function(Action) updates) => super.copyWith((message) => updates(message as Action)) as Action; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Action create() => Action._();
@@ -1374,7 +1754,7 @@ class Action extends $pb.GeneratedMessage {
   static $pb.PbList<Action> createRepeated() => $pb.PbList<Action>();
   @$core.pragma('dart2js:noInline')
   static Action getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Action>(create);
-  static Action _defaultInstance;
+  static Action? _defaultInstance;
 
   @$pb.TagNumber(1)
   ActionCore get core => $_getN(0);

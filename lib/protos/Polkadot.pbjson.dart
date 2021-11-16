@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: Polkadot.proto
 //
-// @dart = 2.3
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use networkDescriptor instead')
 const Network$json = const {
   '1': 'Network',
   '2': const [
@@ -13,6 +17,9 @@ const Network$json = const {
   ],
 };
 
+/// Descriptor for `Network`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List networkDescriptor = $convert.base64Decode('CgdOZXR3b3JrEgwKCFBPTEtBRE9UEAASCgoGS1VTQU1BEAI=');
+@$core.Deprecated('Use rewardDestinationDescriptor instead')
 const RewardDestination$json = const {
   '1': 'RewardDestination',
   '2': const [
@@ -22,6 +29,9 @@ const RewardDestination$json = const {
   ],
 };
 
+/// Descriptor for `RewardDestination`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List rewardDestinationDescriptor = $convert.base64Decode('ChFSZXdhcmREZXN0aW5hdGlvbhIKCgZTVEFLRUQQABIJCgVTVEFTSBABEg4KCkNPTlRST0xMRVIQAg==');
+@$core.Deprecated('Use eraDescriptor instead')
 const Era$json = const {
   '1': 'Era',
   '2': const [
@@ -30,6 +40,9 @@ const Era$json = const {
   ],
 };
 
+/// Descriptor for `Era`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List eraDescriptor = $convert.base64Decode('CgNFcmESIQoMYmxvY2tfbnVtYmVyGAEgASgEUgtibG9ja051bWJlchIWCgZwZXJpb2QYAiABKARSBnBlcmlvZA==');
+@$core.Deprecated('Use balanceDescriptor instead')
 const Balance$json = const {
   '1': 'Balance',
   '2': const [
@@ -41,6 +54,7 @@ const Balance$json = const {
   ],
 };
 
+@$core.Deprecated('Use balanceDescriptor instead')
 const Balance_Transfer$json = const {
   '1': 'Transfer',
   '2': const [
@@ -49,6 +63,9 @@ const Balance_Transfer$json = const {
   ],
 };
 
+/// Descriptor for `Balance`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List balanceDescriptor = $convert.base64Decode('CgdCYWxhbmNlEkEKCHRyYW5zZmVyGAEgASgLMiMuVFcuUG9sa2Fkb3QuUHJvdG8uQmFsYW5jZS5UcmFuc2ZlckgAUgh0cmFuc2Zlcho/CghUcmFuc2ZlchIdCgp0b19hZGRyZXNzGAEgASgJUgl0b0FkZHJlc3MSFAoFdmFsdWUYAiABKAxSBXZhbHVlQg8KDW1lc3NhZ2Vfb25lb2Y=');
+@$core.Deprecated('Use stakingDescriptor instead')
 const Staking$json = const {
   '1': 'Staking',
   '2': const [
@@ -66,6 +83,7 @@ const Staking$json = const {
   ],
 };
 
+@$core.Deprecated('Use stakingDescriptor instead')
 const Staking_Bond$json = const {
   '1': 'Bond',
   '2': const [
@@ -75,6 +93,7 @@ const Staking_Bond$json = const {
   ],
 };
 
+@$core.Deprecated('Use stakingDescriptor instead')
 const Staking_BondAndNominate$json = const {
   '1': 'BondAndNominate',
   '2': const [
@@ -85,6 +104,7 @@ const Staking_BondAndNominate$json = const {
   ],
 };
 
+@$core.Deprecated('Use stakingDescriptor instead')
 const Staking_BondExtra$json = const {
   '1': 'BondExtra',
   '2': const [
@@ -92,6 +112,7 @@ const Staking_BondExtra$json = const {
   ],
 };
 
+@$core.Deprecated('Use stakingDescriptor instead')
 const Staking_Unbond$json = const {
   '1': 'Unbond',
   '2': const [
@@ -99,6 +120,7 @@ const Staking_Unbond$json = const {
   ],
 };
 
+@$core.Deprecated('Use stakingDescriptor instead')
 const Staking_WithdrawUnbonded$json = const {
   '1': 'WithdrawUnbonded',
   '2': const [
@@ -106,6 +128,7 @@ const Staking_WithdrawUnbonded$json = const {
   ],
 };
 
+@$core.Deprecated('Use stakingDescriptor instead')
 const Staking_Nominate$json = const {
   '1': 'Nominate',
   '2': const [
@@ -113,10 +136,14 @@ const Staking_Nominate$json = const {
   ],
 };
 
+@$core.Deprecated('Use stakingDescriptor instead')
 const Staking_Chill$json = const {
   '1': 'Chill',
 };
 
+/// Descriptor for `Staking`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List stakingDescriptor = $convert.base64Decode('CgdTdGFraW5nEjUKBGJvbmQYASABKAsyHy5UVy5Qb2xrYWRvdC5Qcm90by5TdGFraW5nLkJvbmRIAFIEYm9uZBJYChFib25kX2FuZF9ub21pbmF0ZRgCIAEoCzIqLlRXLlBvbGthZG90LlByb3RvLlN0YWtpbmcuQm9uZEFuZE5vbWluYXRlSABSD2JvbmRBbmROb21pbmF0ZRJFCgpib25kX2V4dHJhGAMgASgLMiQuVFcuUG9sa2Fkb3QuUHJvdG8uU3Rha2luZy5Cb25kRXh0cmFIAFIJYm9uZEV4dHJhEjsKBnVuYm9uZBgEIAEoCzIhLlRXLlBvbGthZG90LlByb3RvLlN0YWtpbmcuVW5ib25kSABSBnVuYm9uZBJaChF3aXRoZHJhd191bmJvbmRlZBgFIAEoCzIrLlRXLlBvbGthZG90LlByb3RvLlN0YWtpbmcuV2l0aGRyYXdVbmJvbmRlZEgAUhB3aXRoZHJhd1VuYm9uZGVkEkEKCG5vbWluYXRlGAYgASgLMiMuVFcuUG9sa2Fkb3QuUHJvdG8uU3Rha2luZy5Ob21pbmF0ZUgAUghub21pbmF0ZRI4CgVjaGlsbBgHIAEoCzIgLlRXLlBvbGthZG90LlByb3RvLlN0YWtpbmcuQ2hpbGxIAFIFY2hpbGwakQEKBEJvbmQSHgoKY29udHJvbGxlchgBIAEoCVIKY29udHJvbGxlchIUCgV2YWx1ZRgCIAEoDFIFdmFsdWUSUwoScmV3YXJkX2Rlc3RpbmF0aW9uGAMgASgOMiQuVFcuUG9sa2Fkb3QuUHJvdG8uUmV3YXJkRGVzdGluYXRpb25SEXJld2FyZERlc3RpbmF0aW9uGrwBCg9Cb25kQW5kTm9taW5hdGUSHgoKY29udHJvbGxlchgBIAEoCVIKY29udHJvbGxlchIUCgV2YWx1ZRgCIAEoDFIFdmFsdWUSUwoScmV3YXJkX2Rlc3RpbmF0aW9uGAMgASgOMiQuVFcuUG9sa2Fkb3QuUHJvdG8uUmV3YXJkRGVzdGluYXRpb25SEXJld2FyZERlc3RpbmF0aW9uEh4KCm5vbWluYXRvcnMYBCADKAlSCm5vbWluYXRvcnMaIQoJQm9uZEV4dHJhEhQKBXZhbHVlGAEgASgMUgV2YWx1ZRoeCgZVbmJvbmQSFAoFdmFsdWUYASABKAxSBXZhbHVlGjkKEFdpdGhkcmF3VW5ib25kZWQSJQoOc2xhc2hpbmdfc3BhbnMYASABKAVSDXNsYXNoaW5nU3BhbnMaKgoITm9taW5hdGUSHgoKbm9taW5hdG9ycxgBIAMoCVIKbm9taW5hdG9ycxoHCgVDaGlsbEIPCg1tZXNzYWdlX29uZW9m');
+@$core.Deprecated('Use signingInputDescriptor instead')
 const SigningInput$json = const {
   '1': 'SigningInput',
   '2': const [
@@ -137,6 +164,9 @@ const SigningInput$json = const {
   ],
 };
 
+/// Descriptor for `SigningInput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingInputDescriptor = $convert.base64Decode('CgxTaWduaW5nSW5wdXQSHQoKYmxvY2tfaGFzaBgBIAEoDFIJYmxvY2tIYXNoEiEKDGdlbmVzaXNfaGFzaBgCIAEoDFILZ2VuZXNpc0hhc2gSFAoFbm9uY2UYAyABKARSBW5vbmNlEiEKDHNwZWNfdmVyc2lvbhgEIAEoDVILc3BlY1ZlcnNpb24SLwoTdHJhbnNhY3Rpb25fdmVyc2lvbhgFIAEoDVISdHJhbnNhY3Rpb25WZXJzaW9uEhAKA3RpcBgGIAEoDFIDdGlwEigKA2VyYRgHIAEoCzIWLlRXLlBvbGthZG90LlByb3RvLkVyYVIDZXJhEh8KC3ByaXZhdGVfa2V5GAggASgMUgpwcml2YXRlS2V5EjQKB25ldHdvcmsYCSABKA4yGi5UVy5Qb2xrYWRvdC5Qcm90by5OZXR3b3JrUgduZXR3b3JrEj8KDGJhbGFuY2VfY2FsbBgKIAEoCzIaLlRXLlBvbGthZG90LlByb3RvLkJhbGFuY2VIAFILYmFsYW5jZUNhbGwSPwoMc3Rha2luZ19jYWxsGAsgASgLMhouVFcuUG9sa2Fkb3QuUHJvdG8uU3Rha2luZ0gAUgtzdGFraW5nQ2FsbEIPCg1tZXNzYWdlX29uZW9m');
+@$core.Deprecated('Use signingOutputDescriptor instead')
 const SigningOutput$json = const {
   '1': 'SigningOutput',
   '2': const [
@@ -144,3 +174,5 @@ const SigningOutput$json = const {
   ],
 };
 
+/// Descriptor for `SigningOutput`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List signingOutputDescriptor = $convert.base64Decode('Cg1TaWduaW5nT3V0cHV0EhgKB2VuY29kZWQYASABKAxSB2VuY29kZWQ=');

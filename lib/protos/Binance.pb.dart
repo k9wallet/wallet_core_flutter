@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: Binance.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
@@ -21,7 +21,31 @@ class Transaction extends $pb.GeneratedMessage {
   ;
 
   Transaction._() : super();
-  factory Transaction() => create();
+  factory Transaction({
+    $core.Iterable<$core.List<$core.int>>? msgs,
+    $core.Iterable<$core.List<$core.int>>? signatures,
+    $core.String? memo,
+    $fixnum.Int64? source,
+    $core.List<$core.int>? data,
+  }) {
+    final _result = create();
+    if (msgs != null) {
+      _result.msgs.addAll(msgs);
+    }
+    if (signatures != null) {
+      _result.signatures.addAll(signatures);
+    }
+    if (memo != null) {
+      _result.memo = memo;
+    }
+    if (source != null) {
+      _result.source = source;
+    }
+    if (data != null) {
+      _result.data = data;
+    }
+    return _result;
+  }
   factory Transaction.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Transaction.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -33,7 +57,7 @@ class Transaction extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Transaction copyWith(void Function(Transaction) updates) => super.copyWith((message) => updates(message as Transaction)); // ignore: deprecated_member_use
+  Transaction copyWith(void Function(Transaction) updates) => super.copyWith((message) => updates(message as Transaction)) as Transaction; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Transaction create() => Transaction._();
@@ -41,7 +65,7 @@ class Transaction extends $pb.GeneratedMessage {
   static $pb.PbList<Transaction> createRepeated() => $pb.PbList<Transaction>();
   @$core.pragma('dart2js:noInline')
   static Transaction getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Transaction>(create);
-  static Transaction _defaultInstance;
+  static Transaction? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.List<$core.int>> get msgs => $_getList(0);
@@ -95,7 +119,7 @@ class Signature_PubKey extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Signature_PubKey copyWith(void Function(Signature_PubKey) updates) => super.copyWith((message) => updates(message as Signature_PubKey)); // ignore: deprecated_member_use
+  Signature_PubKey copyWith(void Function(Signature_PubKey) updates) => super.copyWith((message) => updates(message as Signature_PubKey)) as Signature_PubKey; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Signature_PubKey create() => Signature_PubKey._();
@@ -103,7 +127,7 @@ class Signature_PubKey extends $pb.GeneratedMessage {
   static $pb.PbList<Signature_PubKey> createRepeated() => $pb.PbList<Signature_PubKey>();
   @$core.pragma('dart2js:noInline')
   static Signature_PubKey getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Signature_PubKey>(create);
-  static Signature_PubKey _defaultInstance;
+  static Signature_PubKey? _defaultInstance;
 }
 
 class Signature extends $pb.GeneratedMessage {
@@ -116,7 +140,27 @@ class Signature extends $pb.GeneratedMessage {
   ;
 
   Signature._() : super();
-  factory Signature() => create();
+  factory Signature({
+    $core.List<$core.int>? pubKey,
+    $core.List<$core.int>? signature,
+    $fixnum.Int64? accountNumber,
+    $fixnum.Int64? sequence,
+  }) {
+    final _result = create();
+    if (pubKey != null) {
+      _result.pubKey = pubKey;
+    }
+    if (signature != null) {
+      _result.signature = signature;
+    }
+    if (accountNumber != null) {
+      _result.accountNumber = accountNumber;
+    }
+    if (sequence != null) {
+      _result.sequence = sequence;
+    }
+    return _result;
+  }
   factory Signature.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Signature.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -128,7 +172,7 @@ class Signature extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Signature copyWith(void Function(Signature) updates) => super.copyWith((message) => updates(message as Signature)); // ignore: deprecated_member_use
+  Signature copyWith(void Function(Signature) updates) => super.copyWith((message) => updates(message as Signature)) as Signature; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Signature create() => Signature._();
@@ -136,7 +180,7 @@ class Signature extends $pb.GeneratedMessage {
   static $pb.PbList<Signature> createRepeated() => $pb.PbList<Signature>();
   @$core.pragma('dart2js:noInline')
   static Signature getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Signature>(create);
-  static Signature _defaultInstance;
+  static Signature? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get pubKey => $_getN(0);
@@ -189,7 +233,43 @@ class TradeOrder extends $pb.GeneratedMessage {
   ;
 
   TradeOrder._() : super();
-  factory TradeOrder() => create();
+  factory TradeOrder({
+    $core.List<$core.int>? sender,
+    $core.String? id,
+    $core.String? symbol,
+    $fixnum.Int64? ordertype,
+    $fixnum.Int64? side,
+    $fixnum.Int64? price,
+    $fixnum.Int64? quantity,
+    $fixnum.Int64? timeinforce,
+  }) {
+    final _result = create();
+    if (sender != null) {
+      _result.sender = sender;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    if (symbol != null) {
+      _result.symbol = symbol;
+    }
+    if (ordertype != null) {
+      _result.ordertype = ordertype;
+    }
+    if (side != null) {
+      _result.side = side;
+    }
+    if (price != null) {
+      _result.price = price;
+    }
+    if (quantity != null) {
+      _result.quantity = quantity;
+    }
+    if (timeinforce != null) {
+      _result.timeinforce = timeinforce;
+    }
+    return _result;
+  }
   factory TradeOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TradeOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -201,7 +281,7 @@ class TradeOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TradeOrder copyWith(void Function(TradeOrder) updates) => super.copyWith((message) => updates(message as TradeOrder)); // ignore: deprecated_member_use
+  TradeOrder copyWith(void Function(TradeOrder) updates) => super.copyWith((message) => updates(message as TradeOrder)) as TradeOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TradeOrder create() => TradeOrder._();
@@ -209,7 +289,7 @@ class TradeOrder extends $pb.GeneratedMessage {
   static $pb.PbList<TradeOrder> createRepeated() => $pb.PbList<TradeOrder>();
   @$core.pragma('dart2js:noInline')
   static TradeOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TradeOrder>(create);
-  static TradeOrder _defaultInstance;
+  static TradeOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get sender => $_getN(0);
@@ -293,7 +373,23 @@ class CancelTradeOrder extends $pb.GeneratedMessage {
   ;
 
   CancelTradeOrder._() : super();
-  factory CancelTradeOrder() => create();
+  factory CancelTradeOrder({
+    $core.List<$core.int>? sender,
+    $core.String? symbol,
+    $core.String? refid,
+  }) {
+    final _result = create();
+    if (sender != null) {
+      _result.sender = sender;
+    }
+    if (symbol != null) {
+      _result.symbol = symbol;
+    }
+    if (refid != null) {
+      _result.refid = refid;
+    }
+    return _result;
+  }
   factory CancelTradeOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory CancelTradeOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -305,7 +401,7 @@ class CancelTradeOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  CancelTradeOrder copyWith(void Function(CancelTradeOrder) updates) => super.copyWith((message) => updates(message as CancelTradeOrder)); // ignore: deprecated_member_use
+  CancelTradeOrder copyWith(void Function(CancelTradeOrder) updates) => super.copyWith((message) => updates(message as CancelTradeOrder)) as CancelTradeOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CancelTradeOrder create() => CancelTradeOrder._();
@@ -313,7 +409,7 @@ class CancelTradeOrder extends $pb.GeneratedMessage {
   static $pb.PbList<CancelTradeOrder> createRepeated() => $pb.PbList<CancelTradeOrder>();
   @$core.pragma('dart2js:noInline')
   static CancelTradeOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CancelTradeOrder>(create);
-  static CancelTradeOrder _defaultInstance;
+  static CancelTradeOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get sender => $_getN(0);
@@ -351,7 +447,19 @@ class SendOrder_Token extends $pb.GeneratedMessage {
   ;
 
   SendOrder_Token._() : super();
-  factory SendOrder_Token() => create();
+  factory SendOrder_Token({
+    $core.String? denom,
+    $fixnum.Int64? amount,
+  }) {
+    final _result = create();
+    if (denom != null) {
+      _result.denom = denom;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
   factory SendOrder_Token.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SendOrder_Token.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -363,7 +471,7 @@ class SendOrder_Token extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SendOrder_Token copyWith(void Function(SendOrder_Token) updates) => super.copyWith((message) => updates(message as SendOrder_Token)); // ignore: deprecated_member_use
+  SendOrder_Token copyWith(void Function(SendOrder_Token) updates) => super.copyWith((message) => updates(message as SendOrder_Token)) as SendOrder_Token; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SendOrder_Token create() => SendOrder_Token._();
@@ -371,7 +479,7 @@ class SendOrder_Token extends $pb.GeneratedMessage {
   static $pb.PbList<SendOrder_Token> createRepeated() => $pb.PbList<SendOrder_Token>();
   @$core.pragma('dart2js:noInline')
   static SendOrder_Token getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SendOrder_Token>(create);
-  static SendOrder_Token _defaultInstance;
+  static SendOrder_Token? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get denom => $_getSZ(0);
@@ -400,7 +508,19 @@ class SendOrder_Input extends $pb.GeneratedMessage {
   ;
 
   SendOrder_Input._() : super();
-  factory SendOrder_Input() => create();
+  factory SendOrder_Input({
+    $core.List<$core.int>? address,
+    $core.Iterable<SendOrder_Token>? coins,
+  }) {
+    final _result = create();
+    if (address != null) {
+      _result.address = address;
+    }
+    if (coins != null) {
+      _result.coins.addAll(coins);
+    }
+    return _result;
+  }
   factory SendOrder_Input.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SendOrder_Input.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -412,7 +532,7 @@ class SendOrder_Input extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SendOrder_Input copyWith(void Function(SendOrder_Input) updates) => super.copyWith((message) => updates(message as SendOrder_Input)); // ignore: deprecated_member_use
+  SendOrder_Input copyWith(void Function(SendOrder_Input) updates) => super.copyWith((message) => updates(message as SendOrder_Input)) as SendOrder_Input; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SendOrder_Input create() => SendOrder_Input._();
@@ -420,7 +540,7 @@ class SendOrder_Input extends $pb.GeneratedMessage {
   static $pb.PbList<SendOrder_Input> createRepeated() => $pb.PbList<SendOrder_Input>();
   @$core.pragma('dart2js:noInline')
   static SendOrder_Input getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SendOrder_Input>(create);
-  static SendOrder_Input _defaultInstance;
+  static SendOrder_Input? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get address => $_getN(0);
@@ -443,7 +563,19 @@ class SendOrder_Output extends $pb.GeneratedMessage {
   ;
 
   SendOrder_Output._() : super();
-  factory SendOrder_Output() => create();
+  factory SendOrder_Output({
+    $core.List<$core.int>? address,
+    $core.Iterable<SendOrder_Token>? coins,
+  }) {
+    final _result = create();
+    if (address != null) {
+      _result.address = address;
+    }
+    if (coins != null) {
+      _result.coins.addAll(coins);
+    }
+    return _result;
+  }
   factory SendOrder_Output.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SendOrder_Output.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -455,7 +587,7 @@ class SendOrder_Output extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SendOrder_Output copyWith(void Function(SendOrder_Output) updates) => super.copyWith((message) => updates(message as SendOrder_Output)); // ignore: deprecated_member_use
+  SendOrder_Output copyWith(void Function(SendOrder_Output) updates) => super.copyWith((message) => updates(message as SendOrder_Output)) as SendOrder_Output; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SendOrder_Output create() => SendOrder_Output._();
@@ -463,7 +595,7 @@ class SendOrder_Output extends $pb.GeneratedMessage {
   static $pb.PbList<SendOrder_Output> createRepeated() => $pb.PbList<SendOrder_Output>();
   @$core.pragma('dart2js:noInline')
   static SendOrder_Output getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SendOrder_Output>(create);
-  static SendOrder_Output _defaultInstance;
+  static SendOrder_Output? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get address => $_getN(0);
@@ -486,7 +618,19 @@ class SendOrder extends $pb.GeneratedMessage {
   ;
 
   SendOrder._() : super();
-  factory SendOrder() => create();
+  factory SendOrder({
+    $core.Iterable<SendOrder_Input>? inputs,
+    $core.Iterable<SendOrder_Output>? outputs,
+  }) {
+    final _result = create();
+    if (inputs != null) {
+      _result.inputs.addAll(inputs);
+    }
+    if (outputs != null) {
+      _result.outputs.addAll(outputs);
+    }
+    return _result;
+  }
   factory SendOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SendOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -498,7 +642,7 @@ class SendOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SendOrder copyWith(void Function(SendOrder) updates) => super.copyWith((message) => updates(message as SendOrder)); // ignore: deprecated_member_use
+  SendOrder copyWith(void Function(SendOrder) updates) => super.copyWith((message) => updates(message as SendOrder)) as SendOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SendOrder create() => SendOrder._();
@@ -506,7 +650,7 @@ class SendOrder extends $pb.GeneratedMessage {
   static $pb.PbList<SendOrder> createRepeated() => $pb.PbList<SendOrder>();
   @$core.pragma('dart2js:noInline')
   static SendOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SendOrder>(create);
-  static SendOrder _defaultInstance;
+  static SendOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<SendOrder_Input> get inputs => $_getList(0);
@@ -526,7 +670,31 @@ class TokenIssueOrder extends $pb.GeneratedMessage {
   ;
 
   TokenIssueOrder._() : super();
-  factory TokenIssueOrder() => create();
+  factory TokenIssueOrder({
+    $core.List<$core.int>? from,
+    $core.String? name,
+    $core.String? symbol,
+    $fixnum.Int64? totalSupply,
+    $core.bool? mintable,
+  }) {
+    final _result = create();
+    if (from != null) {
+      _result.from = from;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (symbol != null) {
+      _result.symbol = symbol;
+    }
+    if (totalSupply != null) {
+      _result.totalSupply = totalSupply;
+    }
+    if (mintable != null) {
+      _result.mintable = mintable;
+    }
+    return _result;
+  }
   factory TokenIssueOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TokenIssueOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -538,7 +706,7 @@ class TokenIssueOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TokenIssueOrder copyWith(void Function(TokenIssueOrder) updates) => super.copyWith((message) => updates(message as TokenIssueOrder)); // ignore: deprecated_member_use
+  TokenIssueOrder copyWith(void Function(TokenIssueOrder) updates) => super.copyWith((message) => updates(message as TokenIssueOrder)) as TokenIssueOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TokenIssueOrder create() => TokenIssueOrder._();
@@ -546,7 +714,7 @@ class TokenIssueOrder extends $pb.GeneratedMessage {
   static $pb.PbList<TokenIssueOrder> createRepeated() => $pb.PbList<TokenIssueOrder>();
   @$core.pragma('dart2js:noInline')
   static TokenIssueOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TokenIssueOrder>(create);
-  static TokenIssueOrder _defaultInstance;
+  static TokenIssueOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get from => $_getN(0);
@@ -603,7 +771,23 @@ class TokenMintOrder extends $pb.GeneratedMessage {
   ;
 
   TokenMintOrder._() : super();
-  factory TokenMintOrder() => create();
+  factory TokenMintOrder({
+    $core.List<$core.int>? from,
+    $core.String? symbol,
+    $fixnum.Int64? amount,
+  }) {
+    final _result = create();
+    if (from != null) {
+      _result.from = from;
+    }
+    if (symbol != null) {
+      _result.symbol = symbol;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
   factory TokenMintOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TokenMintOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -615,7 +799,7 @@ class TokenMintOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TokenMintOrder copyWith(void Function(TokenMintOrder) updates) => super.copyWith((message) => updates(message as TokenMintOrder)); // ignore: deprecated_member_use
+  TokenMintOrder copyWith(void Function(TokenMintOrder) updates) => super.copyWith((message) => updates(message as TokenMintOrder)) as TokenMintOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TokenMintOrder create() => TokenMintOrder._();
@@ -623,7 +807,7 @@ class TokenMintOrder extends $pb.GeneratedMessage {
   static $pb.PbList<TokenMintOrder> createRepeated() => $pb.PbList<TokenMintOrder>();
   @$core.pragma('dart2js:noInline')
   static TokenMintOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TokenMintOrder>(create);
-  static TokenMintOrder _defaultInstance;
+  static TokenMintOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get from => $_getN(0);
@@ -662,7 +846,23 @@ class TokenBurnOrder extends $pb.GeneratedMessage {
   ;
 
   TokenBurnOrder._() : super();
-  factory TokenBurnOrder() => create();
+  factory TokenBurnOrder({
+    $core.List<$core.int>? from,
+    $core.String? symbol,
+    $fixnum.Int64? amount,
+  }) {
+    final _result = create();
+    if (from != null) {
+      _result.from = from;
+    }
+    if (symbol != null) {
+      _result.symbol = symbol;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
   factory TokenBurnOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TokenBurnOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -674,7 +874,7 @@ class TokenBurnOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TokenBurnOrder copyWith(void Function(TokenBurnOrder) updates) => super.copyWith((message) => updates(message as TokenBurnOrder)); // ignore: deprecated_member_use
+  TokenBurnOrder copyWith(void Function(TokenBurnOrder) updates) => super.copyWith((message) => updates(message as TokenBurnOrder)) as TokenBurnOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TokenBurnOrder create() => TokenBurnOrder._();
@@ -682,7 +882,7 @@ class TokenBurnOrder extends $pb.GeneratedMessage {
   static $pb.PbList<TokenBurnOrder> createRepeated() => $pb.PbList<TokenBurnOrder>();
   @$core.pragma('dart2js:noInline')
   static TokenBurnOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TokenBurnOrder>(create);
-  static TokenBurnOrder _defaultInstance;
+  static TokenBurnOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get from => $_getN(0);
@@ -721,7 +921,23 @@ class TokenFreezeOrder extends $pb.GeneratedMessage {
   ;
 
   TokenFreezeOrder._() : super();
-  factory TokenFreezeOrder() => create();
+  factory TokenFreezeOrder({
+    $core.List<$core.int>? from,
+    $core.String? symbol,
+    $fixnum.Int64? amount,
+  }) {
+    final _result = create();
+    if (from != null) {
+      _result.from = from;
+    }
+    if (symbol != null) {
+      _result.symbol = symbol;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
   factory TokenFreezeOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TokenFreezeOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -733,7 +949,7 @@ class TokenFreezeOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TokenFreezeOrder copyWith(void Function(TokenFreezeOrder) updates) => super.copyWith((message) => updates(message as TokenFreezeOrder)); // ignore: deprecated_member_use
+  TokenFreezeOrder copyWith(void Function(TokenFreezeOrder) updates) => super.copyWith((message) => updates(message as TokenFreezeOrder)) as TokenFreezeOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TokenFreezeOrder create() => TokenFreezeOrder._();
@@ -741,7 +957,7 @@ class TokenFreezeOrder extends $pb.GeneratedMessage {
   static $pb.PbList<TokenFreezeOrder> createRepeated() => $pb.PbList<TokenFreezeOrder>();
   @$core.pragma('dart2js:noInline')
   static TokenFreezeOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TokenFreezeOrder>(create);
-  static TokenFreezeOrder _defaultInstance;
+  static TokenFreezeOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get from => $_getN(0);
@@ -780,7 +996,23 @@ class TokenUnfreezeOrder extends $pb.GeneratedMessage {
   ;
 
   TokenUnfreezeOrder._() : super();
-  factory TokenUnfreezeOrder() => create();
+  factory TokenUnfreezeOrder({
+    $core.List<$core.int>? from,
+    $core.String? symbol,
+    $fixnum.Int64? amount,
+  }) {
+    final _result = create();
+    if (from != null) {
+      _result.from = from;
+    }
+    if (symbol != null) {
+      _result.symbol = symbol;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
   factory TokenUnfreezeOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TokenUnfreezeOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -792,7 +1024,7 @@ class TokenUnfreezeOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TokenUnfreezeOrder copyWith(void Function(TokenUnfreezeOrder) updates) => super.copyWith((message) => updates(message as TokenUnfreezeOrder)); // ignore: deprecated_member_use
+  TokenUnfreezeOrder copyWith(void Function(TokenUnfreezeOrder) updates) => super.copyWith((message) => updates(message as TokenUnfreezeOrder)) as TokenUnfreezeOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TokenUnfreezeOrder create() => TokenUnfreezeOrder._();
@@ -800,7 +1032,7 @@ class TokenUnfreezeOrder extends $pb.GeneratedMessage {
   static $pb.PbList<TokenUnfreezeOrder> createRepeated() => $pb.PbList<TokenUnfreezeOrder>();
   @$core.pragma('dart2js:noInline')
   static TokenUnfreezeOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TokenUnfreezeOrder>(create);
-  static TokenUnfreezeOrder _defaultInstance;
+  static TokenUnfreezeOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get from => $_getN(0);
@@ -846,7 +1078,51 @@ class HTLTOrder extends $pb.GeneratedMessage {
   ;
 
   HTLTOrder._() : super();
-  factory HTLTOrder() => create();
+  factory HTLTOrder({
+    $core.List<$core.int>? from,
+    $core.List<$core.int>? to,
+    $core.String? recipientOtherChain,
+    $core.String? senderOtherChain,
+    $core.List<$core.int>? randomNumberHash,
+    $fixnum.Int64? timestamp,
+    $core.Iterable<SendOrder_Token>? amount,
+    $core.String? expectedIncome,
+    $fixnum.Int64? heightSpan,
+    $core.bool? crossChain,
+  }) {
+    final _result = create();
+    if (from != null) {
+      _result.from = from;
+    }
+    if (to != null) {
+      _result.to = to;
+    }
+    if (recipientOtherChain != null) {
+      _result.recipientOtherChain = recipientOtherChain;
+    }
+    if (senderOtherChain != null) {
+      _result.senderOtherChain = senderOtherChain;
+    }
+    if (randomNumberHash != null) {
+      _result.randomNumberHash = randomNumberHash;
+    }
+    if (timestamp != null) {
+      _result.timestamp = timestamp;
+    }
+    if (amount != null) {
+      _result.amount.addAll(amount);
+    }
+    if (expectedIncome != null) {
+      _result.expectedIncome = expectedIncome;
+    }
+    if (heightSpan != null) {
+      _result.heightSpan = heightSpan;
+    }
+    if (crossChain != null) {
+      _result.crossChain = crossChain;
+    }
+    return _result;
+  }
   factory HTLTOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory HTLTOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -858,7 +1134,7 @@ class HTLTOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  HTLTOrder copyWith(void Function(HTLTOrder) updates) => super.copyWith((message) => updates(message as HTLTOrder)); // ignore: deprecated_member_use
+  HTLTOrder copyWith(void Function(HTLTOrder) updates) => super.copyWith((message) => updates(message as HTLTOrder)) as HTLTOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static HTLTOrder create() => HTLTOrder._();
@@ -866,7 +1142,7 @@ class HTLTOrder extends $pb.GeneratedMessage {
   static $pb.PbList<HTLTOrder> createRepeated() => $pb.PbList<HTLTOrder>();
   @$core.pragma('dart2js:noInline')
   static HTLTOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<HTLTOrder>(create);
-  static HTLTOrder _defaultInstance;
+  static HTLTOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get from => $_getN(0);
@@ -962,7 +1238,23 @@ class DepositHTLTOrder extends $pb.GeneratedMessage {
   ;
 
   DepositHTLTOrder._() : super();
-  factory DepositHTLTOrder() => create();
+  factory DepositHTLTOrder({
+    $core.List<$core.int>? from,
+    $core.Iterable<SendOrder_Token>? amount,
+    $core.List<$core.int>? swapId,
+  }) {
+    final _result = create();
+    if (from != null) {
+      _result.from = from;
+    }
+    if (amount != null) {
+      _result.amount.addAll(amount);
+    }
+    if (swapId != null) {
+      _result.swapId = swapId;
+    }
+    return _result;
+  }
   factory DepositHTLTOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DepositHTLTOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -974,7 +1266,7 @@ class DepositHTLTOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  DepositHTLTOrder copyWith(void Function(DepositHTLTOrder) updates) => super.copyWith((message) => updates(message as DepositHTLTOrder)); // ignore: deprecated_member_use
+  DepositHTLTOrder copyWith(void Function(DepositHTLTOrder) updates) => super.copyWith((message) => updates(message as DepositHTLTOrder)) as DepositHTLTOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static DepositHTLTOrder create() => DepositHTLTOrder._();
@@ -982,7 +1274,7 @@ class DepositHTLTOrder extends $pb.GeneratedMessage {
   static $pb.PbList<DepositHTLTOrder> createRepeated() => $pb.PbList<DepositHTLTOrder>();
   @$core.pragma('dart2js:noInline')
   static DepositHTLTOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DepositHTLTOrder>(create);
-  static DepositHTLTOrder _defaultInstance;
+  static DepositHTLTOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get from => $_getN(0);
@@ -1015,7 +1307,23 @@ class ClaimHTLOrder extends $pb.GeneratedMessage {
   ;
 
   ClaimHTLOrder._() : super();
-  factory ClaimHTLOrder() => create();
+  factory ClaimHTLOrder({
+    $core.List<$core.int>? from,
+    $core.List<$core.int>? swapId,
+    $core.List<$core.int>? randomNumber,
+  }) {
+    final _result = create();
+    if (from != null) {
+      _result.from = from;
+    }
+    if (swapId != null) {
+      _result.swapId = swapId;
+    }
+    if (randomNumber != null) {
+      _result.randomNumber = randomNumber;
+    }
+    return _result;
+  }
   factory ClaimHTLOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory ClaimHTLOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1027,7 +1335,7 @@ class ClaimHTLOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  ClaimHTLOrder copyWith(void Function(ClaimHTLOrder) updates) => super.copyWith((message) => updates(message as ClaimHTLOrder)); // ignore: deprecated_member_use
+  ClaimHTLOrder copyWith(void Function(ClaimHTLOrder) updates) => super.copyWith((message) => updates(message as ClaimHTLOrder)) as ClaimHTLOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ClaimHTLOrder create() => ClaimHTLOrder._();
@@ -1035,7 +1343,7 @@ class ClaimHTLOrder extends $pb.GeneratedMessage {
   static $pb.PbList<ClaimHTLOrder> createRepeated() => $pb.PbList<ClaimHTLOrder>();
   @$core.pragma('dart2js:noInline')
   static ClaimHTLOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ClaimHTLOrder>(create);
-  static ClaimHTLOrder _defaultInstance;
+  static ClaimHTLOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get from => $_getN(0);
@@ -1073,7 +1381,19 @@ class RefundHTLTOrder extends $pb.GeneratedMessage {
   ;
 
   RefundHTLTOrder._() : super();
-  factory RefundHTLTOrder() => create();
+  factory RefundHTLTOrder({
+    $core.List<$core.int>? from,
+    $core.List<$core.int>? swapId,
+  }) {
+    final _result = create();
+    if (from != null) {
+      _result.from = from;
+    }
+    if (swapId != null) {
+      _result.swapId = swapId;
+    }
+    return _result;
+  }
   factory RefundHTLTOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory RefundHTLTOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1085,7 +1405,7 @@ class RefundHTLTOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  RefundHTLTOrder copyWith(void Function(RefundHTLTOrder) updates) => super.copyWith((message) => updates(message as RefundHTLTOrder)); // ignore: deprecated_member_use
+  RefundHTLTOrder copyWith(void Function(RefundHTLTOrder) updates) => super.copyWith((message) => updates(message as RefundHTLTOrder)) as RefundHTLTOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static RefundHTLTOrder create() => RefundHTLTOrder._();
@@ -1093,7 +1413,7 @@ class RefundHTLTOrder extends $pb.GeneratedMessage {
   static $pb.PbList<RefundHTLTOrder> createRepeated() => $pb.PbList<RefundHTLTOrder>();
   @$core.pragma('dart2js:noInline')
   static RefundHTLTOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RefundHTLTOrder>(create);
-  static RefundHTLTOrder _defaultInstance;
+  static RefundHTLTOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get from => $_getN(0);
@@ -1124,7 +1444,27 @@ class TransferOut extends $pb.GeneratedMessage {
   ;
 
   TransferOut._() : super();
-  factory TransferOut() => create();
+  factory TransferOut({
+    $core.List<$core.int>? from,
+    $core.List<$core.int>? to,
+    SendOrder_Token? amount,
+    $fixnum.Int64? expireTime,
+  }) {
+    final _result = create();
+    if (from != null) {
+      _result.from = from;
+    }
+    if (to != null) {
+      _result.to = to;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (expireTime != null) {
+      _result.expireTime = expireTime;
+    }
+    return _result;
+  }
   factory TransferOut.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TransferOut.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1136,7 +1476,7 @@ class TransferOut extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TransferOut copyWith(void Function(TransferOut) updates) => super.copyWith((message) => updates(message as TransferOut)); // ignore: deprecated_member_use
+  TransferOut copyWith(void Function(TransferOut) updates) => super.copyWith((message) => updates(message as TransferOut)) as TransferOut; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransferOut create() => TransferOut._();
@@ -1144,7 +1484,7 @@ class TransferOut extends $pb.GeneratedMessage {
   static $pb.PbList<TransferOut> createRepeated() => $pb.PbList<TransferOut>();
   @$core.pragma('dart2js:noInline')
   static TransferOut getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TransferOut>(create);
-  static TransferOut _defaultInstance;
+  static TransferOut? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get from => $_getN(0);
@@ -1195,7 +1535,27 @@ class SideChainDelegate extends $pb.GeneratedMessage {
   ;
 
   SideChainDelegate._() : super();
-  factory SideChainDelegate() => create();
+  factory SideChainDelegate({
+    $core.List<$core.int>? delegatorAddr,
+    $core.List<$core.int>? validatorAddr,
+    SendOrder_Token? delegation,
+    $core.String? chainId,
+  }) {
+    final _result = create();
+    if (delegatorAddr != null) {
+      _result.delegatorAddr = delegatorAddr;
+    }
+    if (validatorAddr != null) {
+      _result.validatorAddr = validatorAddr;
+    }
+    if (delegation != null) {
+      _result.delegation = delegation;
+    }
+    if (chainId != null) {
+      _result.chainId = chainId;
+    }
+    return _result;
+  }
   factory SideChainDelegate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SideChainDelegate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1207,7 +1567,7 @@ class SideChainDelegate extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SideChainDelegate copyWith(void Function(SideChainDelegate) updates) => super.copyWith((message) => updates(message as SideChainDelegate)); // ignore: deprecated_member_use
+  SideChainDelegate copyWith(void Function(SideChainDelegate) updates) => super.copyWith((message) => updates(message as SideChainDelegate)) as SideChainDelegate; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SideChainDelegate create() => SideChainDelegate._();
@@ -1215,7 +1575,7 @@ class SideChainDelegate extends $pb.GeneratedMessage {
   static $pb.PbList<SideChainDelegate> createRepeated() => $pb.PbList<SideChainDelegate>();
   @$core.pragma('dart2js:noInline')
   static SideChainDelegate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SideChainDelegate>(create);
-  static SideChainDelegate _defaultInstance;
+  static SideChainDelegate? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get delegatorAddr => $_getN(0);
@@ -1267,7 +1627,31 @@ class SideChainRedelegate extends $pb.GeneratedMessage {
   ;
 
   SideChainRedelegate._() : super();
-  factory SideChainRedelegate() => create();
+  factory SideChainRedelegate({
+    $core.List<$core.int>? delegatorAddr,
+    $core.List<$core.int>? validatorSrcAddr,
+    $core.List<$core.int>? validatorDstAddr,
+    SendOrder_Token? amount,
+    $core.String? chainId,
+  }) {
+    final _result = create();
+    if (delegatorAddr != null) {
+      _result.delegatorAddr = delegatorAddr;
+    }
+    if (validatorSrcAddr != null) {
+      _result.validatorSrcAddr = validatorSrcAddr;
+    }
+    if (validatorDstAddr != null) {
+      _result.validatorDstAddr = validatorDstAddr;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (chainId != null) {
+      _result.chainId = chainId;
+    }
+    return _result;
+  }
   factory SideChainRedelegate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SideChainRedelegate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1279,7 +1663,7 @@ class SideChainRedelegate extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SideChainRedelegate copyWith(void Function(SideChainRedelegate) updates) => super.copyWith((message) => updates(message as SideChainRedelegate)); // ignore: deprecated_member_use
+  SideChainRedelegate copyWith(void Function(SideChainRedelegate) updates) => super.copyWith((message) => updates(message as SideChainRedelegate)) as SideChainRedelegate; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SideChainRedelegate create() => SideChainRedelegate._();
@@ -1287,7 +1671,7 @@ class SideChainRedelegate extends $pb.GeneratedMessage {
   static $pb.PbList<SideChainRedelegate> createRepeated() => $pb.PbList<SideChainRedelegate>();
   @$core.pragma('dart2js:noInline')
   static SideChainRedelegate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SideChainRedelegate>(create);
-  static SideChainRedelegate _defaultInstance;
+  static SideChainRedelegate? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get delegatorAddr => $_getN(0);
@@ -1347,7 +1731,27 @@ class SideChainUndelegate extends $pb.GeneratedMessage {
   ;
 
   SideChainUndelegate._() : super();
-  factory SideChainUndelegate() => create();
+  factory SideChainUndelegate({
+    $core.List<$core.int>? delegatorAddr,
+    $core.List<$core.int>? validatorAddr,
+    SendOrder_Token? amount,
+    $core.String? chainId,
+  }) {
+    final _result = create();
+    if (delegatorAddr != null) {
+      _result.delegatorAddr = delegatorAddr;
+    }
+    if (validatorAddr != null) {
+      _result.validatorAddr = validatorAddr;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (chainId != null) {
+      _result.chainId = chainId;
+    }
+    return _result;
+  }
   factory SideChainUndelegate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SideChainUndelegate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1359,7 +1763,7 @@ class SideChainUndelegate extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SideChainUndelegate copyWith(void Function(SideChainUndelegate) updates) => super.copyWith((message) => updates(message as SideChainUndelegate)); // ignore: deprecated_member_use
+  SideChainUndelegate copyWith(void Function(SideChainUndelegate) updates) => super.copyWith((message) => updates(message as SideChainUndelegate)) as SideChainUndelegate; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SideChainUndelegate create() => SideChainUndelegate._();
@@ -1367,7 +1771,7 @@ class SideChainUndelegate extends $pb.GeneratedMessage {
   static $pb.PbList<SideChainUndelegate> createRepeated() => $pb.PbList<SideChainUndelegate>();
   @$core.pragma('dart2js:noInline')
   static SideChainUndelegate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SideChainUndelegate>(create);
-  static SideChainUndelegate _defaultInstance;
+  static SideChainUndelegate? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get delegatorAddr => $_getN(0);
@@ -1418,7 +1822,27 @@ class TimeLockOrder extends $pb.GeneratedMessage {
   ;
 
   TimeLockOrder._() : super();
-  factory TimeLockOrder() => create();
+  factory TimeLockOrder({
+    $core.List<$core.int>? fromAddress,
+    $core.String? description,
+    $core.Iterable<SendOrder_Token>? amount,
+    $fixnum.Int64? lockTime,
+  }) {
+    final _result = create();
+    if (fromAddress != null) {
+      _result.fromAddress = fromAddress;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    if (amount != null) {
+      _result.amount.addAll(amount);
+    }
+    if (lockTime != null) {
+      _result.lockTime = lockTime;
+    }
+    return _result;
+  }
   factory TimeLockOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TimeLockOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1430,7 +1854,7 @@ class TimeLockOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TimeLockOrder copyWith(void Function(TimeLockOrder) updates) => super.copyWith((message) => updates(message as TimeLockOrder)); // ignore: deprecated_member_use
+  TimeLockOrder copyWith(void Function(TimeLockOrder) updates) => super.copyWith((message) => updates(message as TimeLockOrder)) as TimeLockOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TimeLockOrder create() => TimeLockOrder._();
@@ -1438,7 +1862,7 @@ class TimeLockOrder extends $pb.GeneratedMessage {
   static $pb.PbList<TimeLockOrder> createRepeated() => $pb.PbList<TimeLockOrder>();
   @$core.pragma('dart2js:noInline')
   static TimeLockOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimeLockOrder>(create);
-  static TimeLockOrder _defaultInstance;
+  static TimeLockOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get fromAddress => $_getN(0);
@@ -1482,7 +1906,31 @@ class TimeRelockOrder extends $pb.GeneratedMessage {
   ;
 
   TimeRelockOrder._() : super();
-  factory TimeRelockOrder() => create();
+  factory TimeRelockOrder({
+    $core.List<$core.int>? fromAddress,
+    $fixnum.Int64? id,
+    $core.String? description,
+    $core.Iterable<SendOrder_Token>? amount,
+    $fixnum.Int64? lockTime,
+  }) {
+    final _result = create();
+    if (fromAddress != null) {
+      _result.fromAddress = fromAddress;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    if (amount != null) {
+      _result.amount.addAll(amount);
+    }
+    if (lockTime != null) {
+      _result.lockTime = lockTime;
+    }
+    return _result;
+  }
   factory TimeRelockOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TimeRelockOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1494,7 +1942,7 @@ class TimeRelockOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TimeRelockOrder copyWith(void Function(TimeRelockOrder) updates) => super.copyWith((message) => updates(message as TimeRelockOrder)); // ignore: deprecated_member_use
+  TimeRelockOrder copyWith(void Function(TimeRelockOrder) updates) => super.copyWith((message) => updates(message as TimeRelockOrder)) as TimeRelockOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TimeRelockOrder create() => TimeRelockOrder._();
@@ -1502,7 +1950,7 @@ class TimeRelockOrder extends $pb.GeneratedMessage {
   static $pb.PbList<TimeRelockOrder> createRepeated() => $pb.PbList<TimeRelockOrder>();
   @$core.pragma('dart2js:noInline')
   static TimeRelockOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimeRelockOrder>(create);
-  static TimeRelockOrder _defaultInstance;
+  static TimeRelockOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get fromAddress => $_getN(0);
@@ -1552,7 +2000,19 @@ class TimeUnlockOrder extends $pb.GeneratedMessage {
   ;
 
   TimeUnlockOrder._() : super();
-  factory TimeUnlockOrder() => create();
+  factory TimeUnlockOrder({
+    $core.List<$core.int>? fromAddress,
+    $fixnum.Int64? id,
+  }) {
+    final _result = create();
+    if (fromAddress != null) {
+      _result.fromAddress = fromAddress;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    return _result;
+  }
   factory TimeUnlockOrder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TimeUnlockOrder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1564,7 +2024,7 @@ class TimeUnlockOrder extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  TimeUnlockOrder copyWith(void Function(TimeUnlockOrder) updates) => super.copyWith((message) => updates(message as TimeUnlockOrder)); // ignore: deprecated_member_use
+  TimeUnlockOrder copyWith(void Function(TimeUnlockOrder) updates) => super.copyWith((message) => updates(message as TimeUnlockOrder)) as TimeUnlockOrder; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TimeUnlockOrder create() => TimeUnlockOrder._();
@@ -1572,7 +2032,7 @@ class TimeUnlockOrder extends $pb.GeneratedMessage {
   static $pb.PbList<TimeUnlockOrder> createRepeated() => $pb.PbList<TimeUnlockOrder>();
   @$core.pragma('dart2js:noInline')
   static TimeUnlockOrder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimeUnlockOrder>(create);
-  static TimeUnlockOrder _defaultInstance;
+  static TimeUnlockOrder? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get fromAddress => $_getN(0);
@@ -1670,7 +2130,111 @@ class SigningInput extends $pb.GeneratedMessage {
   ;
 
   SigningInput._() : super();
-  factory SigningInput() => create();
+  factory SigningInput({
+    $core.String? chainId,
+    $fixnum.Int64? accountNumber,
+    $fixnum.Int64? sequence,
+    $fixnum.Int64? source,
+    $core.String? memo,
+    $core.List<$core.int>? privateKey,
+    TradeOrder? tradeOrder,
+    CancelTradeOrder? cancelTradeOrder,
+    SendOrder? sendOrder,
+    TokenFreezeOrder? freezeOrder,
+    TokenUnfreezeOrder? unfreezeOrder,
+    HTLTOrder? htltOrder,
+    DepositHTLTOrder? depositHTLTOrder,
+    ClaimHTLOrder? claimHTLTOrder,
+    RefundHTLTOrder? refundHTLTOrder,
+    TokenIssueOrder? issueOrder,
+    TokenMintOrder? mintOrder,
+    TokenBurnOrder? burnOrder,
+    TransferOut? transferOutOrder,
+    SideChainDelegate? sideDelegateOrder,
+    SideChainRedelegate? sideRedelegateOrder,
+    SideChainUndelegate? sideUndelegateOrder,
+    TimeLockOrder? timeLockOrder,
+    TimeRelockOrder? timeRelockOrder,
+    TimeUnlockOrder? timeUnlockOrder,
+  }) {
+    final _result = create();
+    if (chainId != null) {
+      _result.chainId = chainId;
+    }
+    if (accountNumber != null) {
+      _result.accountNumber = accountNumber;
+    }
+    if (sequence != null) {
+      _result.sequence = sequence;
+    }
+    if (source != null) {
+      _result.source = source;
+    }
+    if (memo != null) {
+      _result.memo = memo;
+    }
+    if (privateKey != null) {
+      _result.privateKey = privateKey;
+    }
+    if (tradeOrder != null) {
+      _result.tradeOrder = tradeOrder;
+    }
+    if (cancelTradeOrder != null) {
+      _result.cancelTradeOrder = cancelTradeOrder;
+    }
+    if (sendOrder != null) {
+      _result.sendOrder = sendOrder;
+    }
+    if (freezeOrder != null) {
+      _result.freezeOrder = freezeOrder;
+    }
+    if (unfreezeOrder != null) {
+      _result.unfreezeOrder = unfreezeOrder;
+    }
+    if (htltOrder != null) {
+      _result.htltOrder = htltOrder;
+    }
+    if (depositHTLTOrder != null) {
+      _result.depositHTLTOrder = depositHTLTOrder;
+    }
+    if (claimHTLTOrder != null) {
+      _result.claimHTLTOrder = claimHTLTOrder;
+    }
+    if (refundHTLTOrder != null) {
+      _result.refundHTLTOrder = refundHTLTOrder;
+    }
+    if (issueOrder != null) {
+      _result.issueOrder = issueOrder;
+    }
+    if (mintOrder != null) {
+      _result.mintOrder = mintOrder;
+    }
+    if (burnOrder != null) {
+      _result.burnOrder = burnOrder;
+    }
+    if (transferOutOrder != null) {
+      _result.transferOutOrder = transferOutOrder;
+    }
+    if (sideDelegateOrder != null) {
+      _result.sideDelegateOrder = sideDelegateOrder;
+    }
+    if (sideRedelegateOrder != null) {
+      _result.sideRedelegateOrder = sideRedelegateOrder;
+    }
+    if (sideUndelegateOrder != null) {
+      _result.sideUndelegateOrder = sideUndelegateOrder;
+    }
+    if (timeLockOrder != null) {
+      _result.timeLockOrder = timeLockOrder;
+    }
+    if (timeRelockOrder != null) {
+      _result.timeRelockOrder = timeRelockOrder;
+    }
+    if (timeUnlockOrder != null) {
+      _result.timeUnlockOrder = timeUnlockOrder;
+    }
+    return _result;
+  }
   factory SigningInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1682,7 +2246,7 @@ class SigningInput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)); // ignore: deprecated_member_use
+  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningInput create() => SigningInput._();
@@ -1690,9 +2254,9 @@ class SigningInput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningInput> createRepeated() => $pb.PbList<SigningInput>();
   @$core.pragma('dart2js:noInline')
   static SigningInput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningInput>(create);
-  static SigningInput _defaultInstance;
+  static SigningInput? _defaultInstance;
 
-  SigningInput_OrderOneof whichOrderOneof() => _SigningInput_OrderOneofByTag[$_whichOneof(0)];
+  SigningInput_OrderOneof whichOrderOneof() => _SigningInput_OrderOneofByTag[$_whichOneof(0)]!;
   void clearOrderOneof() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -1966,7 +2530,15 @@ class SigningOutput extends $pb.GeneratedMessage {
   ;
 
   SigningOutput._() : super();
-  factory SigningOutput() => create();
+  factory SigningOutput({
+    $core.List<$core.int>? encoded,
+  }) {
+    final _result = create();
+    if (encoded != null) {
+      _result.encoded = encoded;
+    }
+    return _result;
+  }
   factory SigningOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -1978,7 +2550,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)); // ignore: deprecated_member_use
+  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningOutput create() => SigningOutput._();
@@ -1986,7 +2558,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningOutput> createRepeated() => $pb.PbList<SigningOutput>();
   @$core.pragma('dart2js:noInline')
   static SigningOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningOutput>(create);
-  static SigningOutput _defaultInstance;
+  static SigningOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get encoded => $_getN(0);

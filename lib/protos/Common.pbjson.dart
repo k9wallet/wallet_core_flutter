@@ -2,9 +2,13 @@
 //  Generated code. Do not modify.
 //  source: Common.proto
 //
-// @dart = 2.3
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+@$core.Deprecated('Use signingErrorDescriptor instead')
 const SigningError$json = const {
   '1': 'SigningError',
   '2': const [
@@ -25,3 +29,5 @@ const SigningError$json = const {
   ],
 };
 
+/// Descriptor for `SigningError`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List signingErrorDescriptor = $convert.base64Decode('CgxTaWduaW5nRXJyb3ISBgoCT0sQABIRCg1FcnJvcl9nZW5lcmFsEAESEgoORXJyb3JfaW50ZXJuYWwQAhIVChFFcnJvcl9sb3dfYmFsYW5jZRADEh8KG0Vycm9yX3plcm9fYW1vdW50X3JlcXVlc3RlZBAEEh0KGUVycm9yX21pc3NpbmdfcHJpdmF0ZV9rZXkQBRITCg9FcnJvcl93cm9uZ19mZWUQBhIRCg1FcnJvcl9zaWduaW5nEAcSFAoQRXJyb3JfdHhfdG9vX2JpZxAIEh0KGUVycm9yX21pc3NpbmdfaW5wdXRfdXR4b3MQCRIaChZFcnJvcl9ub3RfZW5vdWdoX3V0eG9zEAoSFwoTRXJyb3Jfc2NyaXB0X3JlZGVlbRALEhcKE0Vycm9yX3NjcmlwdF9vdXRwdXQQDBIgChxFcnJvcl9zY3JpcHRfd2l0bmVzc19wcm9ncmFtEA0=');

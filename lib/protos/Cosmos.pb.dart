@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: Cosmos.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
@@ -22,7 +22,19 @@ class Amount extends $pb.GeneratedMessage {
   ;
 
   Amount._() : super();
-  factory Amount() => create();
+  factory Amount({
+    $core.String? denom,
+    $fixnum.Int64? amount,
+  }) {
+    final _result = create();
+    if (denom != null) {
+      _result.denom = denom;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    return _result;
+  }
   factory Amount.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Amount.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -34,7 +46,7 @@ class Amount extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Amount copyWith(void Function(Amount) updates) => super.copyWith((message) => updates(message as Amount)); // ignore: deprecated_member_use
+  Amount copyWith(void Function(Amount) updates) => super.copyWith((message) => updates(message as Amount)) as Amount; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Amount create() => Amount._();
@@ -42,7 +54,7 @@ class Amount extends $pb.GeneratedMessage {
   static $pb.PbList<Amount> createRepeated() => $pb.PbList<Amount>();
   @$core.pragma('dart2js:noInline')
   static Amount getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Amount>(create);
-  static Amount _defaultInstance;
+  static Amount? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get denom => $_getSZ(0);
@@ -71,7 +83,19 @@ class Fee extends $pb.GeneratedMessage {
   ;
 
   Fee._() : super();
-  factory Fee() => create();
+  factory Fee({
+    $core.Iterable<Amount>? amounts,
+    $fixnum.Int64? gas,
+  }) {
+    final _result = create();
+    if (amounts != null) {
+      _result.amounts.addAll(amounts);
+    }
+    if (gas != null) {
+      _result.gas = gas;
+    }
+    return _result;
+  }
   factory Fee.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Fee.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -83,7 +107,7 @@ class Fee extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Fee copyWith(void Function(Fee) updates) => super.copyWith((message) => updates(message as Fee)); // ignore: deprecated_member_use
+  Fee copyWith(void Function(Fee) updates) => super.copyWith((message) => updates(message as Fee)) as Fee; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Fee create() => Fee._();
@@ -91,7 +115,7 @@ class Fee extends $pb.GeneratedMessage {
   static $pb.PbList<Fee> createRepeated() => $pb.PbList<Fee>();
   @$core.pragma('dart2js:noInline')
   static Fee getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Fee>(create);
-  static Fee _defaultInstance;
+  static Fee? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<Amount> get amounts => $_getList(0);
@@ -116,7 +140,27 @@ class Message_Send extends $pb.GeneratedMessage {
   ;
 
   Message_Send._() : super();
-  factory Message_Send() => create();
+  factory Message_Send({
+    $core.String? fromAddress,
+    $core.String? toAddress,
+    $core.Iterable<Amount>? amounts,
+    $core.String? typePrefix,
+  }) {
+    final _result = create();
+    if (fromAddress != null) {
+      _result.fromAddress = fromAddress;
+    }
+    if (toAddress != null) {
+      _result.toAddress = toAddress;
+    }
+    if (amounts != null) {
+      _result.amounts.addAll(amounts);
+    }
+    if (typePrefix != null) {
+      _result.typePrefix = typePrefix;
+    }
+    return _result;
+  }
   factory Message_Send.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Message_Send.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -128,7 +172,7 @@ class Message_Send extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Message_Send copyWith(void Function(Message_Send) updates) => super.copyWith((message) => updates(message as Message_Send)); // ignore: deprecated_member_use
+  Message_Send copyWith(void Function(Message_Send) updates) => super.copyWith((message) => updates(message as Message_Send)) as Message_Send; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Message_Send create() => Message_Send._();
@@ -136,7 +180,7 @@ class Message_Send extends $pb.GeneratedMessage {
   static $pb.PbList<Message_Send> createRepeated() => $pb.PbList<Message_Send>();
   @$core.pragma('dart2js:noInline')
   static Message_Send getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Message_Send>(create);
-  static Message_Send _defaultInstance;
+  static Message_Send? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get fromAddress => $_getSZ(0);
@@ -179,7 +223,27 @@ class Message_Delegate extends $pb.GeneratedMessage {
   ;
 
   Message_Delegate._() : super();
-  factory Message_Delegate() => create();
+  factory Message_Delegate({
+    $core.String? delegatorAddress,
+    $core.String? validatorAddress,
+    Amount? amount,
+    $core.String? typePrefix,
+  }) {
+    final _result = create();
+    if (delegatorAddress != null) {
+      _result.delegatorAddress = delegatorAddress;
+    }
+    if (validatorAddress != null) {
+      _result.validatorAddress = validatorAddress;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (typePrefix != null) {
+      _result.typePrefix = typePrefix;
+    }
+    return _result;
+  }
   factory Message_Delegate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Message_Delegate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -191,7 +255,7 @@ class Message_Delegate extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Message_Delegate copyWith(void Function(Message_Delegate) updates) => super.copyWith((message) => updates(message as Message_Delegate)); // ignore: deprecated_member_use
+  Message_Delegate copyWith(void Function(Message_Delegate) updates) => super.copyWith((message) => updates(message as Message_Delegate)) as Message_Delegate; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Message_Delegate create() => Message_Delegate._();
@@ -199,7 +263,7 @@ class Message_Delegate extends $pb.GeneratedMessage {
   static $pb.PbList<Message_Delegate> createRepeated() => $pb.PbList<Message_Delegate>();
   @$core.pragma('dart2js:noInline')
   static Message_Delegate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Message_Delegate>(create);
-  static Message_Delegate _defaultInstance;
+  static Message_Delegate? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get delegatorAddress => $_getSZ(0);
@@ -250,7 +314,27 @@ class Message_Undelegate extends $pb.GeneratedMessage {
   ;
 
   Message_Undelegate._() : super();
-  factory Message_Undelegate() => create();
+  factory Message_Undelegate({
+    $core.String? delegatorAddress,
+    $core.String? validatorAddress,
+    Amount? amount,
+    $core.String? typePrefix,
+  }) {
+    final _result = create();
+    if (delegatorAddress != null) {
+      _result.delegatorAddress = delegatorAddress;
+    }
+    if (validatorAddress != null) {
+      _result.validatorAddress = validatorAddress;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (typePrefix != null) {
+      _result.typePrefix = typePrefix;
+    }
+    return _result;
+  }
   factory Message_Undelegate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Message_Undelegate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -262,7 +346,7 @@ class Message_Undelegate extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Message_Undelegate copyWith(void Function(Message_Undelegate) updates) => super.copyWith((message) => updates(message as Message_Undelegate)); // ignore: deprecated_member_use
+  Message_Undelegate copyWith(void Function(Message_Undelegate) updates) => super.copyWith((message) => updates(message as Message_Undelegate)) as Message_Undelegate; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Message_Undelegate create() => Message_Undelegate._();
@@ -270,7 +354,7 @@ class Message_Undelegate extends $pb.GeneratedMessage {
   static $pb.PbList<Message_Undelegate> createRepeated() => $pb.PbList<Message_Undelegate>();
   @$core.pragma('dart2js:noInline')
   static Message_Undelegate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Message_Undelegate>(create);
-  static Message_Undelegate _defaultInstance;
+  static Message_Undelegate? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get delegatorAddress => $_getSZ(0);
@@ -322,7 +406,31 @@ class Message_BeginRedelegate extends $pb.GeneratedMessage {
   ;
 
   Message_BeginRedelegate._() : super();
-  factory Message_BeginRedelegate() => create();
+  factory Message_BeginRedelegate({
+    $core.String? delegatorAddress,
+    $core.String? validatorSrcAddress,
+    $core.String? validatorDstAddress,
+    Amount? amount,
+    $core.String? typePrefix,
+  }) {
+    final _result = create();
+    if (delegatorAddress != null) {
+      _result.delegatorAddress = delegatorAddress;
+    }
+    if (validatorSrcAddress != null) {
+      _result.validatorSrcAddress = validatorSrcAddress;
+    }
+    if (validatorDstAddress != null) {
+      _result.validatorDstAddress = validatorDstAddress;
+    }
+    if (amount != null) {
+      _result.amount = amount;
+    }
+    if (typePrefix != null) {
+      _result.typePrefix = typePrefix;
+    }
+    return _result;
+  }
   factory Message_BeginRedelegate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Message_BeginRedelegate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -334,7 +442,7 @@ class Message_BeginRedelegate extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Message_BeginRedelegate copyWith(void Function(Message_BeginRedelegate) updates) => super.copyWith((message) => updates(message as Message_BeginRedelegate)); // ignore: deprecated_member_use
+  Message_BeginRedelegate copyWith(void Function(Message_BeginRedelegate) updates) => super.copyWith((message) => updates(message as Message_BeginRedelegate)) as Message_BeginRedelegate; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Message_BeginRedelegate create() => Message_BeginRedelegate._();
@@ -342,7 +450,7 @@ class Message_BeginRedelegate extends $pb.GeneratedMessage {
   static $pb.PbList<Message_BeginRedelegate> createRepeated() => $pb.PbList<Message_BeginRedelegate>();
   @$core.pragma('dart2js:noInline')
   static Message_BeginRedelegate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Message_BeginRedelegate>(create);
-  static Message_BeginRedelegate _defaultInstance;
+  static Message_BeginRedelegate? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get delegatorAddress => $_getSZ(0);
@@ -401,7 +509,23 @@ class Message_WithdrawDelegationReward extends $pb.GeneratedMessage {
   ;
 
   Message_WithdrawDelegationReward._() : super();
-  factory Message_WithdrawDelegationReward() => create();
+  factory Message_WithdrawDelegationReward({
+    $core.String? delegatorAddress,
+    $core.String? validatorAddress,
+    $core.String? typePrefix,
+  }) {
+    final _result = create();
+    if (delegatorAddress != null) {
+      _result.delegatorAddress = delegatorAddress;
+    }
+    if (validatorAddress != null) {
+      _result.validatorAddress = validatorAddress;
+    }
+    if (typePrefix != null) {
+      _result.typePrefix = typePrefix;
+    }
+    return _result;
+  }
   factory Message_WithdrawDelegationReward.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Message_WithdrawDelegationReward.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -413,7 +537,7 @@ class Message_WithdrawDelegationReward extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Message_WithdrawDelegationReward copyWith(void Function(Message_WithdrawDelegationReward) updates) => super.copyWith((message) => updates(message as Message_WithdrawDelegationReward)); // ignore: deprecated_member_use
+  Message_WithdrawDelegationReward copyWith(void Function(Message_WithdrawDelegationReward) updates) => super.copyWith((message) => updates(message as Message_WithdrawDelegationReward)) as Message_WithdrawDelegationReward; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Message_WithdrawDelegationReward create() => Message_WithdrawDelegationReward._();
@@ -421,7 +545,7 @@ class Message_WithdrawDelegationReward extends $pb.GeneratedMessage {
   static $pb.PbList<Message_WithdrawDelegationReward> createRepeated() => $pb.PbList<Message_WithdrawDelegationReward>();
   @$core.pragma('dart2js:noInline')
   static Message_WithdrawDelegationReward getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Message_WithdrawDelegationReward>(create);
-  static Message_WithdrawDelegationReward _defaultInstance;
+  static Message_WithdrawDelegationReward? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get delegatorAddress => $_getSZ(0);
@@ -459,7 +583,19 @@ class Message_RawJSON extends $pb.GeneratedMessage {
   ;
 
   Message_RawJSON._() : super();
-  factory Message_RawJSON() => create();
+  factory Message_RawJSON({
+    $core.String? type,
+    $core.String? value,
+  }) {
+    final _result = create();
+    if (type != null) {
+      _result.type = type;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
   factory Message_RawJSON.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Message_RawJSON.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -471,7 +607,7 @@ class Message_RawJSON extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Message_RawJSON copyWith(void Function(Message_RawJSON) updates) => super.copyWith((message) => updates(message as Message_RawJSON)); // ignore: deprecated_member_use
+  Message_RawJSON copyWith(void Function(Message_RawJSON) updates) => super.copyWith((message) => updates(message as Message_RawJSON)) as Message_RawJSON; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Message_RawJSON create() => Message_RawJSON._();
@@ -479,7 +615,7 @@ class Message_RawJSON extends $pb.GeneratedMessage {
   static $pb.PbList<Message_RawJSON> createRepeated() => $pb.PbList<Message_RawJSON>();
   @$core.pragma('dart2js:noInline')
   static Message_RawJSON getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Message_RawJSON>(create);
-  static Message_RawJSON _defaultInstance;
+  static Message_RawJSON? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get type => $_getSZ(0);
@@ -532,7 +668,35 @@ class Message extends $pb.GeneratedMessage {
   ;
 
   Message._() : super();
-  factory Message() => create();
+  factory Message({
+    Message_Send? sendCoinsMessage,
+    Message_Delegate? stakeMessage,
+    Message_Undelegate? unstakeMessage,
+    Message_BeginRedelegate? restakeMessage,
+    Message_WithdrawDelegationReward? withdrawStakeRewardMessage,
+    Message_RawJSON? rawJsonMessage,
+  }) {
+    final _result = create();
+    if (sendCoinsMessage != null) {
+      _result.sendCoinsMessage = sendCoinsMessage;
+    }
+    if (stakeMessage != null) {
+      _result.stakeMessage = stakeMessage;
+    }
+    if (unstakeMessage != null) {
+      _result.unstakeMessage = unstakeMessage;
+    }
+    if (restakeMessage != null) {
+      _result.restakeMessage = restakeMessage;
+    }
+    if (withdrawStakeRewardMessage != null) {
+      _result.withdrawStakeRewardMessage = withdrawStakeRewardMessage;
+    }
+    if (rawJsonMessage != null) {
+      _result.rawJsonMessage = rawJsonMessage;
+    }
+    return _result;
+  }
   factory Message.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory Message.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -544,7 +708,7 @@ class Message extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Message copyWith(void Function(Message) updates) => super.copyWith((message) => updates(message as Message)); // ignore: deprecated_member_use
+  Message copyWith(void Function(Message) updates) => super.copyWith((message) => updates(message as Message)) as Message; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Message create() => Message._();
@@ -552,9 +716,9 @@ class Message extends $pb.GeneratedMessage {
   static $pb.PbList<Message> createRepeated() => $pb.PbList<Message>();
   @$core.pragma('dart2js:noInline')
   static Message getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Message>(create);
-  static Message _defaultInstance;
+  static Message? _defaultInstance;
 
-  Message_MessageOneof whichMessageOneof() => _Message_MessageOneofByTag[$_whichOneof(0)];
+  Message_MessageOneof whichMessageOneof() => _Message_MessageOneofByTag[$_whichOneof(0)]!;
   void clearMessageOneof() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -626,19 +790,60 @@ class Message extends $pb.GeneratedMessage {
 
 class SigningInput extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningInput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Cosmos.Proto'), createEmptyInstance: create)
-    ..a<$fixnum.Int64>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountNumber', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'chainId')
-    ..aOM<Fee>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fee', subBuilder: Fee.create)
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'memo')
-    ..a<$fixnum.Int64>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.List<$core.int>>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'privateKey', $pb.PbFieldType.OY)
-    ..pc<Message>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: Message.create)
-    ..e<BroadcastMode>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mode', $pb.PbFieldType.OE, defaultOrMaker: BroadcastMode.BLOCK, valueOf: BroadcastMode.valueOf, enumValues: BroadcastMode.values)
+    ..e<SigningMode>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signingMode', $pb.PbFieldType.OE, defaultOrMaker: SigningMode.JSON, valueOf: SigningMode.valueOf, enumValues: SigningMode.values)
+    ..a<$fixnum.Int64>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accountNumber', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'chainId')
+    ..aOM<Fee>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fee', subBuilder: Fee.create)
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'memo')
+    ..a<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sequence', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.List<$core.int>>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'privateKey', $pb.PbFieldType.OY)
+    ..pc<Message>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: Message.create)
+    ..e<BroadcastMode>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mode', $pb.PbFieldType.OE, defaultOrMaker: BroadcastMode.BLOCK, valueOf: BroadcastMode.valueOf, enumValues: BroadcastMode.values)
     ..hasRequiredFields = false
   ;
 
   SigningInput._() : super();
-  factory SigningInput() => create();
+  factory SigningInput({
+    SigningMode? signingMode,
+    $fixnum.Int64? accountNumber,
+    $core.String? chainId,
+    Fee? fee,
+    $core.String? memo,
+    $fixnum.Int64? sequence,
+    $core.List<$core.int>? privateKey,
+    $core.Iterable<Message>? messages,
+    BroadcastMode? mode,
+  }) {
+    final _result = create();
+    if (signingMode != null) {
+      _result.signingMode = signingMode;
+    }
+    if (accountNumber != null) {
+      _result.accountNumber = accountNumber;
+    }
+    if (chainId != null) {
+      _result.chainId = chainId;
+    }
+    if (fee != null) {
+      _result.fee = fee;
+    }
+    if (memo != null) {
+      _result.memo = memo;
+    }
+    if (sequence != null) {
+      _result.sequence = sequence;
+    }
+    if (privateKey != null) {
+      _result.privateKey = privateKey;
+    }
+    if (messages != null) {
+      _result.messages.addAll(messages);
+    }
+    if (mode != null) {
+      _result.mode = mode;
+    }
+    return _result;
+  }
   factory SigningInput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningInput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -650,7 +855,7 @@ class SigningInput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)); // ignore: deprecated_member_use
+  SigningInput copyWith(void Function(SigningInput) updates) => super.copyWith((message) => updates(message as SigningInput)) as SigningInput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningInput create() => SigningInput._();
@@ -658,86 +863,117 @@ class SigningInput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningInput> createRepeated() => $pb.PbList<SigningInput>();
   @$core.pragma('dart2js:noInline')
   static SigningInput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningInput>(create);
-  static SigningInput _defaultInstance;
+  static SigningInput? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $fixnum.Int64 get accountNumber => $_getI64(0);
+  SigningMode get signingMode => $_getN(0);
   @$pb.TagNumber(1)
-  set accountNumber($fixnum.Int64 v) { $_setInt64(0, v); }
+  set signingMode(SigningMode v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasAccountNumber() => $_has(0);
+  $core.bool hasSigningMode() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAccountNumber() => clearField(1);
+  void clearSigningMode() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get chainId => $_getSZ(1);
+  $fixnum.Int64 get accountNumber => $_getI64(1);
   @$pb.TagNumber(2)
-  set chainId($core.String v) { $_setString(1, v); }
+  set accountNumber($fixnum.Int64 v) { $_setInt64(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasChainId() => $_has(1);
+  $core.bool hasAccountNumber() => $_has(1);
   @$pb.TagNumber(2)
-  void clearChainId() => clearField(2);
+  void clearAccountNumber() => clearField(2);
 
   @$pb.TagNumber(3)
-  Fee get fee => $_getN(2);
+  $core.String get chainId => $_getSZ(2);
   @$pb.TagNumber(3)
-  set fee(Fee v) { setField(3, v); }
+  set chainId($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasFee() => $_has(2);
+  $core.bool hasChainId() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFee() => clearField(3);
-  @$pb.TagNumber(3)
-  Fee ensureFee() => $_ensure(2);
+  void clearChainId() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get memo => $_getSZ(3);
+  Fee get fee => $_getN(3);
   @$pb.TagNumber(4)
-  set memo($core.String v) { $_setString(3, v); }
+  set fee(Fee v) { setField(4, v); }
   @$pb.TagNumber(4)
-  $core.bool hasMemo() => $_has(3);
+  $core.bool hasFee() => $_has(3);
   @$pb.TagNumber(4)
-  void clearMemo() => clearField(4);
+  void clearFee() => clearField(4);
+  @$pb.TagNumber(4)
+  Fee ensureFee() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $fixnum.Int64 get sequence => $_getI64(4);
+  $core.String get memo => $_getSZ(4);
   @$pb.TagNumber(5)
-  set sequence($fixnum.Int64 v) { $_setInt64(4, v); }
+  set memo($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasSequence() => $_has(4);
+  $core.bool hasMemo() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSequence() => clearField(5);
+  void clearMemo() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.List<$core.int> get privateKey => $_getN(5);
+  $fixnum.Int64 get sequence => $_getI64(5);
   @$pb.TagNumber(6)
-  set privateKey($core.List<$core.int> v) { $_setBytes(5, v); }
+  set sequence($fixnum.Int64 v) { $_setInt64(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasPrivateKey() => $_has(5);
+  $core.bool hasSequence() => $_has(5);
   @$pb.TagNumber(6)
-  void clearPrivateKey() => clearField(6);
+  void clearSequence() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.List<Message> get messages => $_getList(6);
+  $core.List<$core.int> get privateKey => $_getN(6);
+  @$pb.TagNumber(7)
+  set privateKey($core.List<$core.int> v) { $_setBytes(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasPrivateKey() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearPrivateKey() => clearField(7);
 
   @$pb.TagNumber(8)
-  BroadcastMode get mode => $_getN(7);
-  @$pb.TagNumber(8)
-  set mode(BroadcastMode v) { setField(8, v); }
-  @$pb.TagNumber(8)
-  $core.bool hasMode() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearMode() => clearField(8);
+  $core.List<Message> get messages => $_getList(7);
+
+  @$pb.TagNumber(9)
+  BroadcastMode get mode => $_getN(8);
+  @$pb.TagNumber(9)
+  set mode(BroadcastMode v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasMode() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearMode() => clearField(9);
 }
 
 class SigningOutput extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SigningOutput', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TW.Cosmos.Proto'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'signature', $pb.PbFieldType.OY)
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'json')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'serialized')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'error')
     ..hasRequiredFields = false
   ;
 
   SigningOutput._() : super();
-  factory SigningOutput() => create();
+  factory SigningOutput({
+    $core.List<$core.int>? signature,
+    $core.String? json,
+    $core.String? serialized,
+    $core.String? error,
+  }) {
+    final _result = create();
+    if (signature != null) {
+      _result.signature = signature;
+    }
+    if (json != null) {
+      _result.json = json;
+    }
+    if (serialized != null) {
+      _result.serialized = serialized;
+    }
+    if (error != null) {
+      _result.error = error;
+    }
+    return _result;
+  }
   factory SigningOutput.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SigningOutput.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
@@ -749,7 +985,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)); // ignore: deprecated_member_use
+  SigningOutput copyWith(void Function(SigningOutput) updates) => super.copyWith((message) => updates(message as SigningOutput)) as SigningOutput; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SigningOutput create() => SigningOutput._();
@@ -757,7 +993,7 @@ class SigningOutput extends $pb.GeneratedMessage {
   static $pb.PbList<SigningOutput> createRepeated() => $pb.PbList<SigningOutput>();
   @$core.pragma('dart2js:noInline')
   static SigningOutput getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SigningOutput>(create);
-  static SigningOutput _defaultInstance;
+  static SigningOutput? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get signature => $_getN(0);
@@ -776,5 +1012,23 @@ class SigningOutput extends $pb.GeneratedMessage {
   $core.bool hasJson() => $_has(1);
   @$pb.TagNumber(2)
   void clearJson() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get serialized => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set serialized($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSerialized() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSerialized() => clearField(3);
+
+  @$pb.TagNumber(5)
+  $core.String get error => $_getSZ(3);
+  @$pb.TagNumber(5)
+  set error($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasError() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearError() => clearField(5);
 }
 
