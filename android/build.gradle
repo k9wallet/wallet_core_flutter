@@ -1,21 +1,43 @@
 group 'com.k9wallet.wallet_core_flutter'
 version '1.0-SNAPSHOT'
 
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
 buildscript {
-    ext.kotlin_version = '1.3.50'
+    ext.kotlin_version = '1.4.30'
+    ext.wallet_core = '2.6.32'
     repositories {
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:4.1.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
+
+def gh_username = localProperties.getProperty('gh.username')
+def gh_password = localProperties.getProperty('gh.password')
+
 rootProject.allprojects {
     repositories {
+        mavenCentral()
+        maven {
+            name = "wallet-core"
+            url = uri("https://maven.pkg.github.com/trustwallet/wallet-core")
+            credentials {
+                username = gh_username
+                password = gh_password
+            }
+        }
         google()
         jcenter()
     }
@@ -31,10 +53,11 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 23
     }
 }
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.trustwallet:wallet-core:$wallet_core"
 }
